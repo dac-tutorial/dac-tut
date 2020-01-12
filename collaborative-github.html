@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6. Sphinx 协作开发 &mdash; Learn-Sphinx 1.0.0rc1 documentation</title>
+  <title>6. Sphinx 协作开发 &mdash; 文档代码化 (Sphinx) 教程 1.0.1 文档</title>
   
 
   
@@ -25,6 +25,7 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -33,8 +34,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="7. 拓展：Jekyll 博客搭建" href="blogging-with-jekll.html" />
     <link rel="prev" title="5. Sphinx 主题定制" href="set-theme.html" /> 
 </head>
@@ -50,7 +51,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Learn-Sphinx
+            <a href="index.html" class="icon icon-home"> 文档代码化 (Sphinx) 教程
           
 
           
@@ -84,7 +85,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p class="caption"><span class="caption-text">目录：</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. 引言：文档代码化</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick-start.html">2. Sphinx 快速入门</a></li>
@@ -120,7 +121,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Learn-Sphinx</a>
+          <a href="index.html">文档代码化 (Sphinx) 教程</a>
         
       </nav>
 
@@ -171,22 +172,22 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sphinx">
-<h1><span class="section-number">6. </span>Sphinx 协作开发<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>Sphinx 协作开发<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h1>
 <div class="section" id="github">
-<h2><span class="section-number">6.1. </span>速识 Github<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>速识 Github<a class="headerlink" href="#github" title="永久链接至标题">¶</a></h2>
 <p><strong>Github</strong> 是一个基于 <strong>Git</strong> （一个开源的分布式版本控制系统）的版本控制和协作的代码托管平台，因为只支持 git 作为唯一的版本库格式进行托管，因此得名 Github。使用 Github 只需要利用邮箱注册账户，访问 <a class="reference external" href="https://github.com">https://github.com</a> 或下载 Github Desktop 既可。将 Github 作为一个协作开发工具，能够使团队工作更有效率，具有更高的生产力。</p>
 </div>
 <div class="section" id="id1">
-<h2><span class="section-number">6.2. </span>Github 使用手册<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Github 使用手册<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>本教程将以 Github Desktop （目前仅支持支持Windows和macOS两个平台）为例，带同学们学习一些 Github 的基础操作。</p>
 <div class="section" id="github-desktop">
-<h3><span class="section-number">6.2.1. </span>安装 Github Desktop<a class="headerlink" href="#github-desktop" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.1. </span>安装 Github Desktop<a class="headerlink" href="#github-desktop" title="永久链接至标题">¶</a></h3>
 <div class="section" id="id2">
-<h4><span class="section-number">6.2.1.1. </span>注册 Github 账号<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.1.1. </span>注册 Github 账号<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h4>
 <p>使用 GitHub Desktop 需要一个 GitHub.com 或 GitHub Enterprise 帐户，注册流程不再赘述，建议大家使用自己比较常用的邮箱地址注册账号，私人计划 (personal plan)可选择免费计划或付费计划，曾经免费用户只能创建开源仓库，但在GitHub 在被 Microsoft 收购后私有仓库已经可以免费使用了。</p>
 </div>
 <div class="section" id="id3">
-<h4><span class="section-number">6.2.1.2. </span>Github Desktop 下载以及快速入门<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.1.2. </span>Github Desktop 下载以及快速入门<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h4>
 <p>GitHub Desktop 官网： <a class="reference external" href="https://desktop.github.com/">https://desktop.github.com/</a></p>
 <img alt="_images/github-desktop-official.png" src="_images/github-desktop-official.png" />
 <p>根据自己的操作系统安装相应的 GitHub Desktop 版本，以下操作均基于GitHub Desktop for Windows (64bit)版（GitHub Desktop无法在32位Windows系统下工作），安装完成后需要登录到 GitHub 帐户，之后是“Configure Git（配置 Git）”步骤，用于设置名称和电子邮件地址。为确保提交正确到你的GitHub 帐户上， 这里需要填写GitHub 帐户关联的电子邮件地址（但如果同学们希望将自己的邮箱保密，可以使用 GitHub-提供的“no-reply（无需回复）”电子邮件地址， 默认为 <a class="reference external" href="mailto:ID+username&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">ID+username<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a> ）。</p>
@@ -199,7 +200,7 @@
 </div>
 </div>
 <div class="section" id="id4">
-<h3><span class="section-number">6.2.2. </span>仓库创建与管理<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.2. </span>仓库创建与管理<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>单击 <strong>Create a New Repository on your Hard Drive…</strong> （在硬盘上创建新仓库…）</p>
 <div class="figure align-default">
 <img alt="_images/github-new-repo-hd.png" src="_images/github-new-repo-hd.png" />
@@ -207,7 +208,7 @@
 <p>之后可以看到一个设置面板，填写好相关字段后单击 <strong>Create repository</strong> 即可创建本地仓库。</p>
 <div class="figure align-default" id="id10">
 <img alt="_images/github-created.png" src="_images/github-created.png" />
-<p class="caption"><span class="caption-text"><strong>NOTES:</strong> （来自 GitHub 官方帮助文档）</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><strong>NOTES:</strong> （来自 GitHub 官方帮助文档）</span><a class="headerlink" href="#id10" title="永久链接至图片">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>“Name” （名称）定义仓库在本地以及 GitHub 上的名称。</p></li>
@@ -259,7 +260,7 @@
 </div>
 </div>
 <div class="section" id="id9">
-<h2><span class="section-number">6.3. </span>Github 协作开发<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Github 协作开发<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
 <p>Github 支持多人协作开发的三种模式：</p>
 <p><strong>- fork</strong>
 此种模式下，开发者 fork 自己生成一个独立的分支，跟主分支完全独立，pull 代码后，项目维护者可根据代码质量决定是否 merge 代码。如果同学们想参与开发某个开源项目，可以将这个项目 fork 到自己的仓库中，此操作会创建一份完全相同的项目到自己的仓库中，也可以 clone 到本地，参与开发，但是对 fork 的项目进行的修改内容并不会影响原本的仓库。如果同学们在原仓库的基础上有修改，可以向原仓库提出 pull request 申请，请求 merge，原仓库的管理者会收到系统的消息提示，决定是否将修改合并到原仓库。</p>
