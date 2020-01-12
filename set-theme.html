@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Sphinx 主题定制 &mdash; Learn-Sphinx 1.0.0rc1 documentation</title>
+  <title>5. Sphinx 主题定制 &mdash; Learn-Sphinx 1.0.0rc1 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Sphinx 协作开发" href="collaborative-github.html" />
-    <link rel="prev" title="3. Sphinx 文档发布" href="local-and-cloud-release.html" /> 
+    <link rel="next" title="6. Sphinx 协作开发" href="collaborative-github.html" />
+    <link rel="prev" title="4. Sphinx 文档发布" href="local-and-cloud-release.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,35 +88,36 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. 引言：文档代码化</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick-start.html">2. Sphinx 快速入门</a></li>
-<li class="toctree-l1"><a class="reference internal" href="local-and-cloud-release.html">3. Sphinx 文档发布</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Sphinx 主题定制</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">4.1. 使用既定主题</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">4.1.1. 1. 安装主题模板</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">4.1.2. 2. 修改配置文件：</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">4.1.3. 3. 生成网页</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst-guide.html">3. reStructuredText 语法指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="local-and-cloud-release.html">4. Sphinx 文档发布</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Sphinx 主题定制</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">5.1. 使用既定主题</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">5.1.1. 1. 安装主题模板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">5.1.2. 2. 修改配置文件：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">5.1.3. 3. 生成网页</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">4.2. 用户自定义主题</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id6">4.2.1. 基础知识</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#html">4.2.1.1. <strong>HTML</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#css">4.2.1.2. <strong>CSS</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jinja2">4.2.1.3. <strong>jinja2</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">5.2. 用户自定义主题</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">5.2.1. 基础知识</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#html">5.2.1.1. <strong>HTML</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#css">5.2.1.2. <strong>CSS</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jinja2">5.2.1.3. <strong>jinja2</strong></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id16">4.2.2. 自定义主题实操</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id17">4.2.2.1. 1. 安装jinja2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id18">4.2.2.2. 2. 查看需要修改的网页模块</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id19">4.2.2.3. 3. 方法一</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id22">4.2.2.4. 4. 方法二</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id26">4.2.2.5. 5. 单个网页主题修改</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">5.2.2. 自定义主题实操</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id17">5.2.2.1. 1. 安装jinja2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">5.2.2.2. 2. 查看需要修改的网页模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">5.2.2.3. 3. 方法一</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">5.2.2.4. 4. 方法二</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">5.2.2.5. 5. 单个网页主题修改</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="collaborative-github.html">5. Sphinx 协作开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blogging-with-jekll.html">6. 使用 Jekyll 搭建个人博客</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collaborative-github.html">6. Sphinx 协作开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blogging-with-jekll.html">7. 拓展：Jekyll 博客搭建</a></li>
 </ul>
 
             
@@ -162,7 +163,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li><span class="section-number">4. </span>Sphinx 主题定制</li>
+      <li><span class="section-number">5. </span>Sphinx 主题定制</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -182,9 +183,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sphinx">
-<h1><span class="section-number">4. </span>Sphinx 主题定制<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Sphinx 主题定制<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2><span class="section-number">4.1. </span>使用既定主题<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>使用既定主题<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>正如入门指南中所述，下载 Sphinx 后，其安装包中即含有名为 <em>themes</em>
 的文件夹， 包括
 basic、alabaster、classic、sphinxdoc、scrolls、agogo、nature、pyramid、haiku、traditional、epub、bizstyle
@@ -193,7 +194,7 @@ sphinx_rtd_theme）可通过额外安装后使用。</p>
 <p>这里我们主要介绍如何安装并使用
 <a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/">sphinx-rtd-theme</a>。</p>
 <div class="section" id="id2">
-<h3><span class="section-number">4.1.1. </span>1. 安装主题模板<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.1. </span>1. 安装主题模板<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>直接进入命令行，输入 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx-rtd-theme</span></code>，如下图所示：</p>
 <div class="figure align-default">
 <img alt="intall-rtd" src="_images/install-rtd.png" />
@@ -241,14 +242,14 @@ sphinx_rtd_theme）可通过额外安装后使用。</p>
 </ul>
 </div>
 <div class="section" id="id3">
-<h3><span class="section-number">4.1.2. </span>2. 修改配置文件：<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.2. </span>2. 修改配置文件：<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>在 <em>conf.py</em> 中进行如下设置：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id4">
-<h3><span class="section-number">4.1.3. </span>3. 生成网页<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.3. </span>3. 生成网页<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>命令行中再次输入 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code></p>
 <div class="figure align-default">
 <img alt="make-rtd-html" src="_images/make-rtd-html.png" />
@@ -260,19 +261,19 @@ sphinx_rtd_theme）可通过额外安装后使用。</p>
 </div>
 </div>
 <div class="section" id="id5">
-<h2><span class="section-number">4.2. </span>用户自定义主题<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>用户自定义主题<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>Sphinx里面的模板是已经定义好了的，如果想要自定义主题，如修改主题的颜色、为主题增添内容等，那我们需要掌握一定的
 <strong>jinja2</strong>、<strong>HTML</strong> 与 <strong>CSS知识</strong>。</p>
 <div class="section" id="id6">
-<h3><span class="section-number">4.2.1. </span>基础知识<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.1. </span>基础知识<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="html">
-<h4><span class="section-number">4.2.1.1. </span><strong>HTML</strong><a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.1.1. </span><strong>HTML</strong><a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h4>
 <p>超文本标记语言（英语：HyperText Markup
 Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
 <p>同学们可以使用 <strong>HTML</strong> 来建立自己的 WEB 站点，<strong>HTML</strong>
 运行在浏览器上，由浏览器来解析。</p>
 <div class="section" id="id7">
-<h5><span class="section-number">4.2.1.1.1. </span>代码示例<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.1.1.1. </span>代码示例<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -288,7 +289,7 @@ Language，简称：HTML）是一种用于创建网页的标准标记语言。</
 </div>
 </div>
 <div class="section" id="id8">
-<h5><span class="section-number">4.2.1.1.2. </span>代码解释<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.1.1.2. </span>代码解释<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;!DOCTYPE</span> <span class="pre">html&gt;</span></code> 声明为HTML5文档</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span></code> 是 <strong>HTML</strong> 页面的根元素</p></li>
@@ -301,7 +302,7 @@ Language，简称：HTML）是一种用于创建网页的标准标记语言。</
 </ul>
 </div>
 <div class="section" id="id9">
-<h5><span class="section-number">4.2.1.1.3. </span>推荐学习<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.1.1.3. </span>推荐学习<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h5>
 <p>网上有很多免费的 <strong>HTML</strong> 教程，推荐如下：</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.runoob.com/html/html-tutorial.html">HTML菜鸟教程</a></p></li>
@@ -311,10 +312,10 @@ WEB前端第一季</a></p></li>
 </div>
 </div>
 <div class="section" id="css">
-<h4><span class="section-number">4.2.1.2. </span><strong>CSS</strong><a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.1.2. </span><strong>CSS</strong><a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h4>
 <p><strong>CSS</strong> 用于控制网页的样式和布局。</p>
 <div class="section" id="id10">
-<h5><span class="section-number">4.2.1.2.1. </span>示例<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.1.2.1. </span>示例<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">body</span>
 <span class="p">{</span>
 <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span><span class="n">red</span><span class="p">;</span>
@@ -333,7 +334,7 @@ WEB前端第一季</a></p></li>
 </div>
 </div>
 <div class="section" id="id11">
-<h5><span class="section-number">4.2.1.2.2. </span>代码解释<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.1.2.2. </span>代码解释<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">body</span>
    <span class="p">{</span>
    <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span><span class="c1">#d0e4fe;</span>
@@ -360,7 +361,7 @@ WEB前端第一季</a></p></li>
 <strong>20px</strong>。</p>
 </div>
 <div class="section" id="id12">
-<h5><span class="section-number">4.2.1.2.3. </span>推荐学习<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.1.2.3. </span>推荐学习<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h5>
 <p>网上有很多免费的 <strong>CSS</strong> 教程，推荐如下：</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.runoob.com/css/css-tutorial.html">CSS菜鸟教程</a></p></li>
@@ -368,7 +369,7 @@ WEB前端第一季</a></p></li>
 </div>
 </div>
 <div class="section" id="jinja2">
-<h4><span class="section-number">4.2.1.3. </span><strong>jinja2</strong><a class="headerlink" href="#jinja2" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.1.3. </span><strong>jinja2</strong><a class="headerlink" href="#jinja2" title="Permalink to this headline">¶</a></h4>
 <p>如想对主题增添内容，那我们需要使用 <strong>jinja2</strong> 语言， <strong>jinja2</strong> 是
 <strong>Flask</strong> 作者开发的一个模板系统，起初是仿 <strong>django</strong>
 模板的一个模板引擎，为 <strong>Flask</strong>
@@ -379,7 +380,7 @@ WEB前端第一季</a></p></li>
 <p><strong>Jinja</strong>
 模版包含了变量、表达式和标签，当模版被渲染时，变量和表达式会被替换为特定的值，标签用来控制模版的逻辑。</p>
 <div class="section" id="id13">
-<h5><span class="section-number">4.2.1.3.1. </span>代码示例<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.1.3.1. </span>代码示例<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -402,7 +403,7 @@ WEB前端第一季</a></p></li>
 </div>
 </div>
 <div class="section" id="id14">
-<h5><span class="section-number">4.2.1.3.2. </span>代码解释<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.1.3.2. </span>代码解释<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">...</span> <span class="pre">%}</span></code> 表示循环结构</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">{{...}}</span></code> 里内含变量，需要对其进行赋值</p></li>
@@ -412,7 +413,7 @@ WEB前端第一季</a></p></li>
 </ul>
 </div>
 <div class="section" id="id15">
-<h5><span class="section-number">4.2.1.3.3. </span>推荐学习<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.1.3.3. </span>推荐学习<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h5>
 <p>网上有很多免费的 <strong>HTML</strong> 教程，推荐如下：</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.w3cschool.cn/yshfid/">jinja2教程1</a></p></li>
@@ -422,7 +423,7 @@ WEB前端第一季</a></p></li>
 </div>
 </div>
 <div class="section" id="id16">
-<h3><span class="section-number">4.2.2. </span>自定义主题实操<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.2. </span>自定义主题实操<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <p>要自定义文档的输出，可以通过将与原始文件名同名的文件添加到模板目录中来覆盖所有的模板。 Sphinx 将首先在
 <em>config.py</em> 中的 template_path
 和<em>html_static_path</em> 中查找模板，如果找不到它正在寻找的模板，将回退到所选主题的模板。</p>
@@ -433,11 +434,11 @@ WEB前端第一季</a></p></li>
 <p>该教程简单演示如何使用两种方法更改 <strong>Sphinx_rtd_theme</strong>
 主题左侧导航栏的颜色。</p>
 <div class="section" id="id17">
-<h4><span class="section-number">4.2.2.1. </span>1. 安装jinja2<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.1. </span>1. 安装jinja2<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
 <p>Anaconda 环境中已经集成了 jinja2，因此无需再次安装。</p>
 </div>
 <div class="section" id="id18">
-<h4><span class="section-number">4.2.2.2. </span>2. 查看需要修改的网页模块<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.2. </span>2. 查看需要修改的网页模块<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
 <p>因为我们想要修改导航栏的颜色，所以需要知道生成的网页中左侧导航栏所对应的网页代码。</p>
 <p>我们首先进入生成的网页，点击鼠标右键，进入<strong>检查</strong>，找到如下代码块：</p>
 <div class="figure align-default">
@@ -450,9 +451,9 @@ WEB前端第一季</a></p></li>
 <code class="docutils literal notranslate"><span class="pre">wy-nav-top</span></code>、<code class="docutils literal notranslate"><span class="pre">.wy-nav-side</span></code>。因此，我们只需要对这几个属性进行修改即可。</p>
 </div>
 <div class="section" id="id19">
-<h4><span class="section-number">4.2.2.3. </span>3. 方法一<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.3. </span>3. 方法一<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="layout-html">
-<h5><span class="section-number">4.2.2.3.1. </span>3.1 创建 同名模板 <em>layout.html</em><a class="headerlink" href="#layout-html" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.2.3.1. </span>3.1 创建 同名模板 <em>layout.html</em><a class="headerlink" href="#layout-html" title="Permalink to this headline">¶</a></h5>
 <p>在文件夹里找到 <em>source</em>-<em>templates</em> 文件夹，然后在 <em>templates</em>
 文件夹下创建 <em>layout.html</em>。</p>
 <p>使用 <strong>jinja2</strong> 在 <em>layout.html</em> 中编写如下代码：</p>
@@ -484,14 +485,14 @@ WEB前端第一季</a></p></li>
 <p>此段代码的作用是在把网页头部导航栏背景色设置为绿色，左侧导航栏背景色设置为深橘色。</p>
 </div>
 <div class="section" id="id20">
-<h5><span class="section-number">4.2.2.3.2. </span>3.2 修改配置文件<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.2.3.2. </span>3.2 修改配置文件<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h5>
 <p>我们需要同步修改 <em>config.py</em> 中的配置：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id21">
-<h5><span class="section-number">4.2.2.3.3. </span>3.3 生成网页<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.2.3.3. </span>3.3 生成网页<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h5>
 <p>点击保存后，重新在命令行中键入 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>，即可生成如下网页：</p>
 <div class="figure align-default">
 <img alt="改变导航栏颜色" src="_images/change-nav-color.png" />
@@ -499,11 +500,11 @@ WEB前端第一季</a></p></li>
 </div>
 </div>
 <div class="section" id="id22">
-<h4><span class="section-number">4.2.2.4. </span>4. 方法二<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.4. </span>4. 方法二<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
 <p>该方法与方法一同理，只是把 <em>css</em> 文件单拎了出来, 即在 <em>layout.html</em>
 中链接了外部的 <em>css</em> 文件，并将 <em>css</em> 文件置于<em>static</em> 文件夹下。</p>
 <div class="section" id="id23">
-<h5><span class="section-number">4.2.2.4.1. </span>4.1 创建同名模板 <em>layout.html</em><a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.2.4.1. </span>4.1 创建同名模板 <em>layout.html</em><a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h5>
 <p>编写代码如下：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">&quot;!layout.html&quot;</span> <span class="o">%</span><span class="p">}</span>
 <span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">footer</span> <span class="o">%</span><span class="p">}</span> <span class="p">{{</span> <span class="nb">super</span><span class="p">()</span> <span class="p">}}</span>
@@ -520,7 +521,7 @@ WEB前端第一季</a></p></li>
 </ul>
 </div>
 <div class="section" id="custom-css">
-<h5><span class="section-number">4.2.2.4.2. </span>4.2 创建 <em>custom.css</em><a class="headerlink" href="#custom-css" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.2.4.2. </span>4.2 创建 <em>custom.css</em><a class="headerlink" href="#custom-css" title="Permalink to this headline">¶</a></h5>
 <p>在文件夹里找到 <em>source</em>-<em>static</em> 文件夹，然后在 <em>static</em> 文件夹下创建
 <em>custom.css</em>.</p>
 <p>使用 <strong>css</strong> 语言 在 <em>custom.css</em> 中编写如下代码：</p>
@@ -536,7 +537,7 @@ WEB前端第一季</a></p></li>
 </div>
 </div>
 <div class="section" id="id24">
-<h5><span class="section-number">4.2.2.4.3. </span>4.3 修改配置文件<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.2.4.3. </span>4.3 修改配置文件<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h5>
 <p>与此同时，在 <em>config.py</em> 中进行如下设置：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;_static&quot;</span><span class="p">]</span>
 
@@ -545,7 +546,7 @@ WEB前端第一季</a></p></li>
 </div>
 </div>
 <div class="section" id="id25">
-<h5><span class="section-number">4.2.2.4.4. </span>4.4 生成网页<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h5>
+<h5><span class="section-number">5.2.2.4.4. </span>4.4 生成网页<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h5>
 <p>点击保存后，重新在命令行中键入 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>，即可生成如下网页：</p>
 <div class="figure align-default">
 <img alt="改变网页样式" src="_images/change-nav-color.png" />
@@ -553,7 +554,7 @@ WEB前端第一季</a></p></li>
 </div>
 </div>
 <div class="section" id="id26">
-<h4><span class="section-number">4.2.2.5. </span>5. 单个网页主题修改<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.5. </span>5. 单个网页主题修改<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
 <p>经过以上操作步骤后，主页主题已修改完毕，但是当我们打开单个页面（如Chapter1）后，主题样式却并没有发生更改。如下图所示：</p>
 <div class="figure align-default">
 <img alt="单个主题页面" src="_images/single-html.png" />
@@ -586,10 +587,10 @@ WEB前端第一季</a></p></li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="collaborative-github.html" class="btn btn-neutral float-right" title="5. Sphinx 协作开发" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="collaborative-github.html" class="btn btn-neutral float-right" title="6. Sphinx 协作开发" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="local-and-cloud-release.html" class="btn btn-neutral float-left" title="3. Sphinx 文档发布" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="local-and-cloud-release.html" class="btn btn-neutral float-left" title="4. Sphinx 文档发布" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
