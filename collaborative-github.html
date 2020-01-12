@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Sphinx 协作开发 &mdash; Learn-Sphinx 1.0.0rc1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. 使用 Jekyll 搭建个人博客" href="blogging-with-jekll.html" />
+    <link rel="prev" title="4. Sphinx 主题定制" href="set-theme.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Learn-Sphinx
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. 引言：文档代码化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">2. Sphinx 快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="local-and-cloud-release.html">3. Sphinx 文档发布</a></li>
+<li class="toctree-l1"><a class="reference internal" href="set-theme.html">4. Sphinx 主题定制</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Sphinx 协作开发</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#github">5.1. 速识 Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">5.2. Github 使用手册</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#github-desktop">5.2.1. 安装 Github Desktop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">5.2.1.1. 注册 Github 账号</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">5.2.1.2. Github Desktop 下载以及快速入门</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">5.2.2. 仓库创建与管理</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">5.3. Github 协作开发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github-pages">5.4. Github Pages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">5.4.1. Github Pages 基本功能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphinx-github-pages">5.4.2. sphinx 与 Github Pages 发布</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="blogging-with-jekll.html">6. 使用 Jekyll 搭建个人博客</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Learn-Sphinx</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">5. </span>Sphinx 协作开发</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/collaborative-github.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sphinx">
+<h1><span class="section-number">5. </span>Sphinx 协作开发<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="github">
+<h2><span class="section-number">5.1. </span>速识 Github<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<p><strong>Github</strong> 是一个基于 <strong>Git</strong> （一个开源的分布式版本控制系统）的版本控制和协作的代码托管平台，因为只支持 git 作为唯一的版本库格式进行托管，因此得名 Github。使用 Github 只需要利用邮箱注册账户，访问 <a class="reference external" href="https://github.com">https://github.com</a> 或下载 Github Desktop 既可。将 Github 作为一个协作开发工具，能够使团队工作更有效率，具有更高的生产力。</p>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">5.2. </span>Github 使用手册<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>本教程将以 Github Desktop （目前仅支持支持Windows和macOS两个平台）为例，带同学们学习一些 Github 的基础操作。</p>
+<div class="section" id="github-desktop">
+<h3><span class="section-number">5.2.1. </span>安装 Github Desktop<a class="headerlink" href="#github-desktop" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h4><span class="section-number">5.2.1.1. </span>注册 Github 账号<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>使用 GitHub Desktop 需要一个 GitHub.com 或 GitHub Enterprise 帐户，注册流程不再赘述，建议大家使用自己比较常用的邮箱地址注册账号，私人计划 (personal plan)可选择免费计划或付费计划，曾经免费用户只能创建开源仓库，但在GitHub 在被 Microsoft 收购后私有仓库已经可以免费使用了。</p>
+</div>
+<div class="section" id="id3">
+<h4><span class="section-number">5.2.1.2. </span>Github Desktop 下载以及快速入门<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>GitHub Desktop 官网： <a class="reference external" href="https://desktop.github.com/">https://desktop.github.com/</a></p>
+<img alt="_images/github-desktop-official.png" src="_images/github-desktop-official.png" />
+<p>根据自己的操作系统安装相应的 GitHub Desktop 版本，以下操作均基于GitHub Desktop for Windows (64bit)版（GitHub Desktop无法在32位Windows系统下工作），安装完成后需要登录到 GitHub 帐户，之后是“Configure Git（配置 Git）”步骤，用于设置名称和电子邮件地址。为确保提交正确到你的GitHub 帐户上， 这里需要填写GitHub 帐户关联的电子邮件地址（但如果同学们希望将自己的邮箱保密，可以使用 GitHub-提供的“no-reply（无需回复）”电子邮件地址， 默认为 <a class="reference external" href="mailto:ID+username&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">ID+username<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a> ）。</p>
+<img alt="_images/github-desktop-config.png" src="_images/github-desktop-config.png" />
+<p>然后，同学们会看到 GitHub Desktop 的主界面，让我们从**Create a tutorial repository and clone it**开始快速创建第一个Git仓库！</p>
+<img alt="_images/github-desktop-create-repo.png" src="_images/github-desktop-create-repo.png" />
+<p><strong>Tip</strong>：为减少设置开发环境的时间，建议同学们安装 Visual Studio Code 并将其作为 GitHub Desktop 的默认文本编辑器，并将 GitHub Desktop 的默认 Shell 设置为 PowerShell（或 Git Bash，如果同学们已经安装了Git SCM的话），这些可以在 File-Options-Advanced 中找到，本教程会在后面提到两者的使用。</p>
+<img alt="_images/github-desktop-vscode.png" src="_images/github-desktop-vscode.png" />
+<img alt="_images/github-desktop-options.png" src="_images/github-desktop-options.png" />
+</div>
+</div>
+<div class="section" id="id4">
+<h3><span class="section-number">5.2.2. </span>仓库创建与管理<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>单击 <strong>Create a New Repository on your Hard Drive…</strong> （在硬盘上创建新仓库…）</p>
+<div class="figure align-default">
+<img alt="_images/github-new-repo-hd.png" src="_images/github-new-repo-hd.png" />
+</div>
+<p>之后可以看到一个设置面板，填写好相关字段后单击 <strong>Create repository</strong> 即可创建本地仓库。</p>
+<div class="figure align-default" id="id11">
+<img alt="_images/github-created.png" src="_images/github-created.png" />
+<p class="caption"><span class="caption-text"><strong>NOTES:</strong> （来自 GitHub 官方帮助文档）</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>“Name” （名称）定义仓库在本地以及 GitHub 上的名称。</p></li>
+<li><p>“Description”（说明） 是一个可选字段，可用于提供有关仓库目的的更多信息。</p></li>
+<li><p>“Local path” （本地路径）设置仓库在计算机上的位置。</p></li>
+<li><p><strong>Initialize this repository with a README</strong> （使用自述文件初始化此仓库）创建包含 README.md 文件的初始提交。自述文件帮助了解项目的目的，因此建议选择此选项并加入有用的信息。更多信息请参阅 <a class="reference external" href="https://help.github.com/articles/about-readmes">关于自述文件</a>。</p></li>
+<li><p><strong>Git ignore</strong> （Git 忽略）下拉菜单可添加自定义文件，以忽略本地仓库中不想存储在版本控制中的特定文件。如有要使用的特定语言或框架，可以从可用的列表中选择选项。如果刚刚开始学习使用 Github，尽请跳过此选择。更多信息请参阅 <a class="reference external" href="https://help.github.com/articles/ignoring-files">忽略文件</a>。</p></li>
+<li><p><strong>License</strong> （许可证）下拉菜单可将开源许可证添加到仓库中的 LICENSE 文件。无需担心要立即添加许可证。有关可用开源许可证以及如何将它们添加到仓库的更多信息，请参阅 <a class="reference external" href="https://help.github.com/articles/licensing-a-repository">许可仓库</a>。</p></li>
+</ul>
+<p>接着，让我们来认识一下 “Lean-Git” 仓库的 <strong>管理界面</strong>：</p>
+<ol class="arabic simple">
+<li><p>菜单下方的栏显示了 GitHub Desktop 中仓库的当前状态：</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Current repository：</strong> （当前仓库）目前正在处理的仓库的名称。可以单击 <strong>Current repository</strong> 切换到 GitHub Desktop 中的不同仓库。</p></li>
+<li><p><strong>Current branch：</strong> （当前分支）目前正在处理的分支的名称。 可以单击 <strong>Current branch</strong> 来查看仓库中的所有分支、切换到不同的分支或者创建新分支。在仓库中创建拉取请求后，也可单击 <strong>Current branch</strong> 查看。</p></li>
+<li><p><strong>Publish repository：</strong> （发布仓库）目前我们的 “Learn-Git” 仓库只存在于同学们自己的计算机中，同学们是唯一能访问该仓库的人。将仓库发布到 GitHub 可使其在多个处理同一项目的计算机和团队成员之间保持同步。</p></li>
+</ul>
+<img alt="_images/github-three-funcs.png" src="_images/github-three-funcs.png" />
+<ol class="arabic simple" start="2">
+<li><p>在左侧边栏中，你可以看到 <strong>Changes</strong> （更改）和 <strong>History</strong> （历史记录）视图。</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Changes</strong> 视图显示同学们对当前分支中的文件已经做出但尚未提交到本地仓库的更改。在底部，同学们还能看到“Summary”（摘要）框和“Description”（说明）文本框，以及 <strong>Commit to master</strong> （提交到 master）按钮。此操作是提交新更改的位置。 <strong>Commit</strong> （提交）按钮指示要将更改提交到哪个分支。</p></li>
+</ul>
+<img alt="_images/github-commit2master.png" src="_images/github-commit2master.png" />
+<ul class="simple">
+<li><p><strong>History</strong> （历史记录）视图显示仓库当前分支上以前的提交。同学们应会看到在创建仓库时 GitHub Desktop 所创建的“初始提交”。可以单击每个文件以查看该文件的差异，也就是提交中对该文件的更改。差异只显示文件已更改的部分，而不显示文件的全部内容。</p></li>
+</ul>
+<img alt="_images/github-history.png" src="_images/github-history.png" />
+<ol class="arabic simple" start="3">
+<li><p>将仓库推送到 GitHub，这样同学们也能在 GitHub.com 上对仓库进行修改了。</p></li>
+</ol>
+<ul class="simple">
+<li><p>单击 <strong>Publish repository</strong> （发布仓库）</p></li>
+</ul>
+<img alt="_images/github-publish-repo.png" src="_images/github-publish-repo.png" />
+<ul class="simple">
+<li><p>同学们会看到 “Name”（名称）和“Description”（说明）与创建仓库时完成的字段匹配，此外还有一个选项 <strong>Keep this code private</strong> （保留此代码为私有），如果不想与 GitHub 的其他用户公开分享代码，可选择此选项，然后单击 <strong>Publish repository</strong>，即可发布仓库。</p></li>
+</ul>
+<img alt="_images/github-keep-private.png" src="_images/github-keep-private.png" />
+<ul class="simple">
+<li><p>同学们可以从 GitHub Desktop 访问 GitHub.com 上的仓库。在文件菜单中，单击 <strong>Repository</strong> （仓库），然后单击 <strong>View on GitHub</strong> （在 GitHub 上查看），即可直接在默认浏览器中打开仓库。</p></li>
+</ul>
+<img alt="_images/github-view.jpg" src="_images/github-view.jpg" />
+<p>接下来，同学们就可以对于自己的仓库进行提交和推送更改了！</p>
+<p><strong>Tip:</strong> GitHub Desktop 中的大多数操作也有对应的快捷键，掌握一些常用的快捷键有助于提高工作效率。
+关键盘快捷键的完整列表，请参阅 <a class="reference external" href="https://help.github.com/desktop/getting-started-with-github-desktop/keyboard-shortcuts-in-github-desktop">GitHub Desktop 中的键盘快捷键</a>。</p>
+</div>
+</div>
+<div class="section" id="id9">
+<h2><span class="section-number">5.3. </span>Github 协作开发<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>Github 支持多人协作开发的三种模式：</p>
+<p><strong>- fork</strong>
+此种模式下，开发者 fork 自己生成一个独立的分支，跟主分支完全独立，pull 代码后，项目维护者可根据代码质量决定是否 merge 代码。如果同学们想参与开发某个开源项目，可以将这个项目 fork 到自己的仓库中，此操作会创建一份完全相同的项目到自己的仓库中，也可以 clone 到本地，参与开发，但是对 fork 的项目进行的修改内容并不会影响原本的仓库。如果同学们在原仓库的基础上有修改，可以向原仓库提出 pull request 申请，请求 merge，原仓库的管理者会收到系统的消息提示，决定是否将修改合并到原仓库。</p>
+<p>值得注意的是，fork 这种协作方式下，每个成员在开发时都是独立的，可以自行对项目的某一部分进行修改，之后请求合并，但将分支合并的时候，比较容易出现冲突，导致 merge 无法自动完成，最终必须手动处理这些冲突。所以同学们在 fork 模式下进行协作开发的时候，分工一定要明确，不能让两个人都对一个文件进行操作。</p>
+<p><em>具体操作</em></p>
+<p>进入 Repo，点击仓库右上角的 fork，还可以将项目克隆到本地。</p>
+<img alt="_images/github-fork.jpg" src="_images/github-fork.jpg" />
+<p><strong>- collaborator</strong>
+此种模式下，代码仓库的所有者可以为单个仓库增加具备读写权限的合作者。被添加进来的成员就拥有了对该仓库的读写权限，可以将该仓库 clone 到本地进行开发，也同样拥有向该仓库远程提交的权限，但是该仓库不会出现在合作开发者的仓库中。每个合作者都能看到代码库页面访问状态的变化。</p>
+<p>本教程的开发最早是基于此种模式，后来为了教程资产管理的方便，转而基于 organization 模式，在 organization 部分会做详细阐述。</p>
+<p><em>具体操作</em></p>
+<p>进入 Repo，点击 Settings-&gt; Collaborators-&gt; Add collaborator 即可邀请，被邀请者需要在邮箱中进行确认。</p>
+<img alt="_images/github-settings.jpg" src="_images/github-settings.jpg" />
+<p>在设置中通过邮箱或用户名添加合作者</p>
+<img alt="_images/github-collaborators.jpg" src="_images/github-collaborators.jpg" />
+<p><strong>- organization</strong>
+此种模式下，组织的所有者可以针对不同的代码仓库建立不同访问权限的团队。如果需要为监管的几个团队设置不同的权限级别，或者为不同的代码仓库增加不同的成员，希望项目既有 collaborator 同时又可以限制他们的读写权利，尤其是限制其“写”的权利，可利用 organization 来为成员赋予不同等级的权力。</p>
+<p><em>具体操作</em></p>
+<p>组织是非登录账号，不能像创建普通登录账号那样直接创建，而是需要以 GitHub 用户身份登录，然后再创建组织，创建者自然成为组的管理者。所以首先项目团队中需要一个人登入 Github 创建一个组织账号。</p>
+<ol class="arabic simple">
+<li><p>进入 Github 点击个人头像，选择 Settings。</p></li>
+</ol>
+<img alt="_images/github-org-settings.jpg" src="_images/github-org-settings.jpg" />
+<ol class="arabic simple" start="2">
+<li><p>Organization-&gt; New Organization。</p></li>
+</ol>
+<img alt="_images/github-org-org.jpg" src="_images/github-org-org.jpg" />
+<ol class="arabic simple" start="3">
+<li><p>为组织选择合适的计划（免费还是不同级别的付费），默认会选择免费的没有私有版本库的开源方案。</p></li>
+</ol>
+<img alt="_images/github-org-choose-plan.jpg" src="_images/github-org-choose-plan.jpg" />
+<ol class="arabic simple" start="4">
+<li><p>填写组织相关信息。</p></li>
+</ol>
+<img alt="_images/github-org-set-up-team.jpg" src="_images/github-org-set-up-team.jpg" />
+<ol class="arabic simple" start="5">
+<li><p>为组织添加成员。</p></li>
+</ol>
+<img alt="_images/github-org-add-orgmem.jpg" src="_images/github-org-add-orgmem.jpg" />
+<ol class="arabic simple" start="6">
+<li><p>为新建组织设定拥有者（Owner），当前用户，即正在创建组织的用户是组织拥有者之一，用户还可以为组织指派更多的组织拥有者，多个组织拥有者的权限并无差别，都可以管理组织，甚至可以将其他用户从拥有者团队中删除。</p></li>
+</ol>
+<img alt="_images/github-org-add-owner.jpg" src="_images/github-org-add-owner.jpg" />
+<ol class="arabic simple" start="7">
+<li><p>设置组员权限。在项目主页(<a class="reference external" href="https://github.com">https://github.com</a>/组名)找到 Settings-&gt;Member privileges 进行设置。默认情况下组员是没有权限进行 push 操作的,把 Default repository permission 设置为 Write 保存即可 ,这样组员就可以对仓库文件进行 push 操作了。</p></li>
+</ol>
+<img alt="_images/github-org-member-privileges.png" src="_images/github-org-member-privileges.png" />
+<p>如果需要项目团队中的每一个人都可以管理当前的项目资产，拥有同样的等级权限，organization 模式便是最佳选择，编写本教程过程中也是考虑到资产管理和使用的方便，将协作模式由 collaborator 转为了 organization。</p>
+<p><strong>Tip</strong>：GitHub 提供了由个人账号向组织账号迁移的途径。但需要注意的是，个人账号一旦转换为组织账号，无法还原。删除后，所有的项目也会随之删除。</p>
+<p>同学们加入组织成为拥有者后，可在个人主页看到组织，并且可以由个人账户切换到组织账户。</p>
+<img alt="_images/github-org-profile.jpg" src="_images/github-org-profile.jpg" />
+<img alt="_images/github-org-switch2org.jpg" src="_images/github-org-switch2org.jpg" />
+<p>同学们还可以对当前加入的组织进行管理，可以选择离开当前组织。</p>
+<img alt="_images/github-org-leave.jpg" src="_images/github-org-leave.jpg" />
+<p>开发者在这三种模式下的权限依次为 fork &lt; organization &lt; collaborator。</p>
+</div>
+<div class="section" id="github-pages">
+<h2><span class="section-number">5.4. </span>Github Pages<a class="headerlink" href="#github-pages" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h3><span class="section-number">5.4.1. </span>Github Pages 基本功能<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>Github Pages 官网：<a class="reference external" href="https://pages.github.com/">https://pages.github.com/</a></p>
+<p>Github Pages 作为一种线上发布方式，完全免费，零成本，提供 username.github.io 的域名, 免费的静态网站服务器；集成在 Github 中, 直接和代码管理绑定在一起, 随着代码更新自动重新部署, 使用非常方便；没有数量限制, 每一个 Github repository 都可以部署为一个静态网站。</p>
+<p>利用 Github Pages 进行基本的静态网页发布的方式有两种，一是打开 Github Pages 官网，点击 Github Repository ，会自动跳转到当前 Github 账户；同学们也可以直接登录自己的 Github 账号。</p>
+<div class="figure align-default">
+<img alt="_images/githubpages-home.jpg" src="_images/githubpages-home.jpg" />
+</div>
+<p>进入需要发布的 Repo 界面，选择 Settings，下拉找到 Github Pages 选项</p>
+<img alt="_images/githubpages-settings.jpg" src="_images/githubpages-settings.jpg" />
+<p>选择网页生成的来源，用户和组织站点的默认发布源是主分支。</p>
+<img alt="_images/githubpages-settings.jpg" src="_images/githubpages-settings.jpg" />
+<p>选择合适的发布主题。</p>
+<img alt="_images/githubpages-choose-theme.jpg" src="_images/githubpages-choose-theme.jpg" />
+<p><strong>注意</strong> 这里提供的主题需要配合jekll使用才能生效。</p>
+<p>设置完成后，显示已自动生成网页，除了通过自动生成的域名进行访问，用户也可以自定义域名。</p>
+<img alt="_images/githubpages-publish.jpg" src="_images/githubpages-publish.jpg" />
+</div>
+<div class="section" id="sphinx-github-pages">
+<h3><span class="section-number">5.4.2. </span>sphinx 与 Github Pages 发布<a class="headerlink" href="#sphinx-github-pages" title="Permalink to this headline">¶</a></h3>
+<p>利用 sphinx 制作的文档可以借助 Github Pages 进行发布，具体操作如下：</p>
+<p>正常情况下 Github Pages 只能发布由 sphinx 编译后的 html 文件包，不能直接发布 rst、md 等格式的其他文件。如果需要使用 sphinx 发布 Github Pages 兼容的 html，需要添加一个 sphinx 内置拓展 ‘sphinx.ext.githubpages’，具体配置如下图：</p>
+<div class="figure align-default" id="id12">
+<img alt="_images/githubpages-config.jpg" src="_images/githubpages-config.jpg" />
+<p class="caption"><span class="caption-text">配置过程中可能会报错提示未安装某些拓展包，按照提示安装既可。</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple">
+<li><p>按照本教程的 <strong>quick-start</strong> -&gt; <strong>创建项目</strong> 一节中的输出 html 文件方法输出 html 文件。Sphinx 默认的 html 主题在本教程的 <strong>quick-start</strong> -&gt; <strong>HTML 输出选项</strong> (Options for HTML output)一节中有介绍，同学们可以回顾相关章节对内容进行复习。输出结果如下图：</p></li>
+</ol>
+<img alt="_images/githubpages-html-output.jpg" src="_images/githubpages-html-output.jpg" />
+<ol class="arabic simple" start="2">
+<li><p>直接通过 Github Desktop 在本地创建新仓库（记住要命名为 username.github.io），直接导入文件中的内容。</p></li>
+</ol>
+<img alt="_images/githubpages-add-exist-from-hd.jpg" src="_images/githubpages-add-exist-from-hd.jpg" />
+<ol class="arabic simple" start="3">
+<li><p>在左侧填写 <strong>Summary</strong> （此项必填），然后点击 <strong>commit to master</strong> 提交，并 publish repository。</p></li>
+</ol>
+<img alt="_images/githubpages-publish-from-desktop.jpg" src="_images/githubpages-publish-from-desktop.jpg" />
+<p>在 Github.com 中可以看到从本地成功上传的文件：</p>
+<img alt="_images/githubpages-upload2github.jpg" src="_images/githubpages-upload2github.jpg" />
+<p>另外，如果云端已经创建了一个名为 username.github.io 的仓库（username 指的是 Github 账户名），操作如下：</p>
+<ol class="arabic simple">
+<li><p>先将仓库 clone 到本地。</p></li>
+</ol>
+<img alt="_images/githubpages-clone-repo.jpg" src="_images/githubpages-clone-repo.jpg" />
+<p>可以直接选中要克隆的仓库，也可以输入仓库的 URL 进行克隆。</p>
+<ol class="arabic simple" start="2">
+<li><p>在仓库界面按快捷键 <strong>Ctrl+Shift+F</strong> 或根据提示将本地的文件拷贝到仓库目录下。</p></li>
+</ol>
+<img alt="_images/githubpages-show-in-explore.jpg" src="_images/githubpages-show-in-explore.jpg" />
+<ol class="arabic simple" start="3">
+<li><p>和直接通过 Desktop 创建新仓库操作一致，提交 changes，然后点击 <strong>publish branch</strong> 将变动提交至云端。</p></li>
+</ol>
+<img alt="_images/githubpages-publish-branch.jpg" src="_images/githubpages-publish-branch.jpg" />
+<p><strong>Tip</strong>：上述操作可以通过 Git GUI 以及 Git Bash 实现（这两种方式此处不再描述，感兴趣的同学可以上网查找相关教程）。</p>
+<ol class="arabic simple" start="4">
+<li><p>访问 <a class="reference external" href="https://username.github.io">https://username.github.io</a> 即可看到发布的 Github Pages 静态网页。</p></li>
+</ol>
+<img alt="_images/githubpages-homepage.jpg" src="_images/githubpages-homepage.jpg" />
+<p>本教程的完整文档最终也使用了 Github Pages 进行发布，具体请点击：<strong>待补</strong></p>
+<p>操作是不是十分简单呢？同学们赶紧用 sphinx 生成的 html 文件发布  Github Pages 静态网页吧！</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="blogging-with-jekll.html" class="btn btn-neutral float-right" title="6. 使用 Jekyll 搭建个人博客" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="set-theme.html" class="btn btn-neutral float-left" title="4. Sphinx 主题定制" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, PKU
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <link rel="stylesheet" type="text/css"
+  href="_static/custom.css">
+
+
+
+</body>
+</html>

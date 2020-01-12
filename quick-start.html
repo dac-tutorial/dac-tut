@@ -1,0 +1,737 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Sphinx 快速入门 &mdash; Learn-Sphinx 1.0.0rc1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. reStructuredText 语法指南" href="rst-guide.html" />
+    <link rel="prev" title="1. 引言：文档代码化" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Learn-Sphinx
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. 引言：文档代码化</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Sphinx 快速入门</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">2.1. Sphinx 开发环境配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">2.1.1. Windows 环境配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#anaconda">2.1.1.1. Anaconda 安装与配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visual-studio-code">2.1.1.2. Visual Studio Code 安装与配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vs-code-sphinx-anaconda">2.1.1.3. VS Code 调用 Sphinx (Anaconda)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#macos">2.1.2. macOS 环境配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2.1.2.1. Anaconda 安装与配置 （推荐）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pip">2.1.2.2. Pip 安装与配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#homebrew">2.1.2.3. Homebrew 安装与配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">2.1.2.4. Visual Studio Code 安装与配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">2.1.2.5. VS Code 调用 Sphinx (Anaconda)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">2.2. 第一个 Sphinx 项目</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">2.2.1. 创建项目</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">2.2.2. 组织内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">2.2.3. 修改配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project-information">2.2.3.1. 项目信息 (Project information)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general-configuration">2.2.3.2. 一般配置项 (General configuration)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#html-options-for-html-output">2.2.3.3. HTML 输出选项 (Options for HTML output)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">2.2.4. 发布文档</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst-guide.html">3. reStructuredText 语法指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst-guide.html#id4">4. 我展示的是一级标题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="local-and-cloud-release.html">5. 专题 1：Sphinx 文档发布</a></li>
+<li class="toctree-l1"><a class="reference internal" href="set-theme.html">6. 专题 2：Sphinx 主题定制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collaborative-github.html">7. 专题 3：Sphinx 协作开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blogging-with-jekll.html">8. 专题 4：使用 Jekyll 搭建个人博客</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blogging-with-jekll.html#id1">9. Jekyll 是什么？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blogging-with-jekll.html#id2">10. 配置 Jekyll 开发环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blogging-with-jekll.html#id11">11. 使用 Jekyll 搭建个人博客</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Learn-Sphinx</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">2. </span>Sphinx 快速入门</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/quick-start.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sphinx">
+<h1><span class="section-number">2. </span>Sphinx 快速入门<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.sphinx-doc.org/">Sphinx</a> 是一种基于 Python 的文档工具，它可以令人轻松的撰写出清晰且优美的文档，由 Georg Brandl 在 BSD 许可证下开发。</p></li>
+<li><p>Sphinx 最初是为创作<a class="reference external" href="http://docs.python.org/">新版 Python 文档</a>而开发的，如今它已成为 Python 项目首选的文档工具，并对其它开发语言也有很好的支持。</p></li>
+<li><p>Sphinx 采用 <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a> 作为默认标记语言，并使用 <a class="reference external" href="http://docutils.sf.net/">Docutils</a> 对标记文本进行解析和转换。</p></li>
+</ul>
+<p><img alt="sphinx-doc.org" src="_images/sphinx-doc.org.png" /></p>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h2><span class="section-number">2.1. </span>Sphinx 开发环境配置<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>参考 Sphinx 的官方文档，<a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/installation.html">配置 Sphinx 开发环境</a>主要包括安装 Python 开发环境、使用 pip 工具安装 sphinx 、安装配置文本、代码编辑器等步骤，同时还涉及到使用命令行和修改系统环境变量等操作。这些步骤对于初学者来说略有些复杂繁琐，很容易就迷失在各种琐碎的配置细节中，打击同学们的学习热情。</p>
+<p>不过 Python 社区始终有一批能人志士在为简化和优化开发环境配置而作各种努力，Anaconda 就是其中相当出色一个，下面将会介绍如何通过 Anaconda 和 VS Code 在 Windows 和 macOS 两大操作系统上配置 Sphinx 开发环境，同学们可以根据自己使用的操作系统查看相应的部分。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Anaconda</strong> 是一个开源的 Python 发行版，支持 Windows、macOS、Linux，Anaconda 是一个打包的集合，里面预装好了conda、Python 解释器、众多第三方库（比如 Sphinx）、科学计算工具等等，其核心功能是由 conda 提供的包管理与环境管理功能。</p></li>
+<li><p><strong>Visual Studio Code (VS Code)</strong> 是由 Microsoft 公司开发的新一代代码编辑器，支持 Windows、macOS、Linux，将代码编辑器、调试器、终端等工具整合于一体，具有语法高亮、代码补全、括号匹配等功能，支持版本管理和远程开发，并拥有丰富的拓展生态。</p></li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<div class="section" id="windows">
+<h3><span class="section-number">2.1.1. </span>Windows 环境配置<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><strong>注意：</strong> 以下步骤不需要同学们预先安装 Python 解释器（如果之前有安装也可以考虑将其卸载），而是直接使用 Anaconda 内集成的 Python 解释器，如果同学们先前已经安装过单独的 Python 解释器（运行 Sphinx 必须预先安装 Python 3.5 及以上版本），可直接在命令行中使用命令 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span></code> 安装 Sphinx 及运行 Sphinx 所需要的 <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a>、<a class="reference external" href="http://jinja.pocoo.org/">jinja2</a> 等第三方库（前提是 Python 和 Pip 已添加在系统变量的 path 中）。</p>
+<p>更加推荐同学们使用 Anaconda 来完成 Sphinx 开发环境配置，因为 conda 将几乎所有的工具、第三方库都当做 package 对待，甚至包括 python 和 conda 自身，它可以帮助我们方便地管理自己的 Python 开发环境，不仅能够将不同开发项目所依赖的开发环境完全独立开来，还可轻易地复制整个 Python 环境到其他机器上。</p>
+</div></blockquote>
+<div class="section" id="anaconda">
+<h4><span class="section-number">2.1.1.1. </span>Anaconda 安装与配置<a class="headerlink" href="#anaconda" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>打开 <a class="reference external" href="https://www.anaconda.com/distribution/">Anaconda 官方下载页</a>，下载适合的安装包：</p></li>
+</ol>
+<p><img alt="anaconda-download" src="_images/anaconda-download.png" /></p>
+<blockquote>
+<div><p><strong>提示：</strong> 如果官网下载速度较慢，可到清华大学开源软件镜像站下载 <a class="reference external" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">Anaconda 安装包</a>。</p>
+</div></blockquote>
+<ol class="simple">
+<li><p>下载完成后，运行可执行文件进行安装：</p></li>
+</ol>
+<p><img alt="anaconda-setup" src="_images/anaconda-setup.gif" /></p>
+<blockquote>
+<div><p><strong>注意：</strong></p>
+<ol class="simple">
+<li><p>（可选）Anaconda 需要占用较大的存储空间，可考虑安装在非系统盘。</p></li>
+<li><p>请在 “Advanced Options” 中将勾选两个可选选项：</p></li>
+</ol>
+<p><img alt="anaconda-setup-options" src="_images/anaconda-setup-options.png" /></p>
+<ul>
+<li><p><strong>第一个选项</strong> 会将 Anaconda 的安装目录添加至系统环境变量的 path 中，有利于我们之后在 VS Code 中快速激活 conda 环境，以及直接使用 base 环境中已安装的库和脚本，简化操作流程，若是在安装过程中没有勾选此选项，需要自行添加系统环境变量，即添加Anaconda的安装路径以及到path。</p>
+<ul>
+<li><p>如上图红字所示，Anaconda 官方不建议勾选此选项，而建议使用 Anaconda Prompt (或 Anaconda Powershell Prompt，以下将两者统称为 Anaconda Prompt) 。这是因为勾选此选项会将 Anaconda 的若干目录添加至 path 目录中的最前面；如果用户之前已经安装了其他 Python 解释器，勾选此选项会导致用户直接调用 Python 时优先调用 Anaconda 内置的 Python 解释器，而不是用户单独安装的 Python 解释器，如下图所示：</p>
+<p><img alt="two-python-interpreter" src="_images/two-python-interpreter.png" /></p>
+</li>
+<li><p>（可选）假如同学们依然希望系统默认调用先前单独安装的 Python 解释器，只需要在完成Anaconda 安装后，手动将 path 中单独安装的 Python 解释器的路径移动到 Anaconda 目录之前，操作方法如下：</p>
+<p><img alt="windows-path-config" src="_images/windows-path-config.gif" /></p>
+<p>此时，在命令行调用 Python 时会优先调用单独安装的 Python 解释器，只有在激活 conda 环境后才会调用 conda 里的 Python 解释器。（可以看到两个 Python 解释器的版本和版权说明有所区别）</p>
+<p><img alt="python-vs-conda-python" src="_images/python-vs-conda-python.png" /></p>
+</li>
+</ul>
+</li>
+<li><p><strong>第二个选项</strong> 可使其他 Python 开发工具（如 VS Code）自动探测到 Anaconda。</p></li>
+</ul>
+</div></blockquote>
+<ol class="simple">
+<li><p>完成 Anaconda 的安装后，检查 Sphinx 是否已安装。</p></li>
+</ol>
+<blockquote>
+<div><p><strong>提示 ：</strong> Anaconda 通常数月才更新一次，但其内部包含的包通常具有更快的更新频次，可使用 Anaconda 的包管理器对包进行单独更新。</p>
+</div></blockquote>
+<p>点击 ”开始“ 菜单 - “Anaconda3” -  “Anaconda Powershell Prompt”，输入 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code> ，回车；</p>
+<p>此指令会列出当前 conda 环境 (base) 下所有已安装的包，正常情况下我们可看到若干以 Sphinx 开头的包：</p>
+<p><img alt="conda-list" src="_images/conda-list.png" /></p>
+<p><img alt="conda-list-sphinx" src="_images/conda-list-sphinx.png" /></p>
+<p>（可选）如图所示，目前 Anaconda 里的 Sphinx 的版本是 2.2.0，低于官网的最新版本。我们可在 Anaconda Prompt 中输入 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">sphinx</span></code> 单独对 Sphinx 进行更新，但考虑到我们是第一次使用 Anaconda，更加推荐使用 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">--all</span></code> 命令对该环境下所有包都进行一次更新：</p>
+<p><img alt="anaconda-update" src="_images/anaconda-update.gif" /></p>
+<p><strong>注意：</strong><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">--all</span></code> 命令执行中途需要手动输入一次 <code class="docutils literal notranslate"><span class="pre">y</span></code> 以确认更新操作，整个过程需要一段时间，当命令行最后一行显示 <code class="docutils literal notranslate"><span class="pre">done</span></code> 时，更新完毕，即可关闭命令行窗口。</p>
+<blockquote>
+<div><p><strong>提示：</strong> Anaconda 的默认软件镜像源位于国外，可通过修改 Anaconda 软件镜像源的方式解决在国内可能会遭遇的网络访问不稳定，下载速率慢等问题。（推荐使用清华大学开源软件镜像站的 Anaconda 镜像）</p>
+<p>具体操作步骤如下：</p>
+<ol class="simple">
+<li><p>打开 ”开始“菜单 - “Anaconda3” -  “Anaconda Prompt”，输入 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">config</span> <span class="pre">--set</span> <span class="pre">show_channel_urls</span> <span class="pre">yes</span></code> 回车，该命令会在用户文件夹下创建 <code class="docutils literal notranslate"><span class="pre">.condarc</span></code> 文件；</p></li>
+</ol>
+<p><img alt="conda-config-channel" src="_images/conda-config-channel.png" /></p>
+<ol class="simple">
+<li><p>进入用户文件夹，使用记事本打开<code class="docutils literal notranslate"><span class="pre">.condarc</span></code> 文件，将其中内容替换为如下内容：</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssl_verify</span><span class="p">:</span> <span class="n">true</span>
+<span class="n">channels</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">defaults</span>
+<span class="n">show_channel_urls</span><span class="p">:</span> <span class="n">true</span>
+<span class="n">default_channels</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span>
+  <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">free</span>
+  <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">r</span>
+<span class="n">custom_channels</span><span class="p">:</span>
+  <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">cloud</span>
+  <span class="n">msys2</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">cloud</span>
+  <span class="n">bioconda</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">cloud</span>
+  <span class="n">menpo</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">cloud</span>
+  <span class="n">pytorch</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">cloud</span>
+  <span class="n">simpleitk</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">cloud</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>保存并退出<code class="docutils literal notranslate"><span class="pre">.condarc</span></code> 文件。</p></li>
+</ol>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="visual-studio-code">
+<h4><span class="section-number">2.1.1.2. </span>Visual Studio Code 安装与配置<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>打开 <a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code 官网</a>，下载适合的安装包：</p></li>
+</ol>
+<p><img alt="vscode-download" src="_images/vscode-download.png" /></p>
+<ol class="simple">
+<li><p>下载完成后，运行可执行文件进行安装，其安装过程与 Anaconda 安装过程相似：</p></li>
+</ol>
+<blockquote>
+<div><p><strong>注意：</strong> 请在安装程序的 “选择其他任务” 页中将所有复选框勾选上。
+<img alt="vscode-setup-options" src="_images/vscode-setup-options.png" /></p>
+</div></blockquote>
+<ol class="simple">
+<li><p>完成安装后打开 VS Code，在  <em><strong>Extentions</strong></em> 中安装 <em><strong>Python</strong></em> 和 <em><strong>reStructuredText</strong></em> 拓展。</p></li>
+</ol>
+<p><img alt="vscode-extentions" src="_images/vscode-extentions.gif" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="vs-code-sphinx-anaconda">
+<h4><span class="section-number">2.1.1.3. </span>VS Code 调用 Sphinx (Anaconda)<a class="headerlink" href="#vs-code-sphinx-anaconda" title="Permalink to this headline">¶</a></h4>
+<p>完成以上步骤后，已经基本搭建好了一个基于 Anaconda 和 VS Code 的一体化 Sphinx 工作台。在这一环节中，同学们可以检测自己的 Sphinx 开发环境， 为下一节 “第一个 Sphinx 项目” 做好准备。</p>
+<ol class="simple">
+<li><p>在计算机任意位置新建一个文件夹，命名为 “learn-sphinx”，右击文件夹单击 “通过 Code 打开”。文件夹会显示在左侧边栏，下一小节创建项目的文件将会储存在这个文件夹。</p></li>
+</ol>
+<p><img alt="open-with-vscode" src="_images/open-with-vscode.png" /></p>
+<ol class="simple">
+<li><p>打开 VS Code 窗口的集成 Terminal（默认为 Windows Powershell，可自行修改；可使用 <kbd>Ctrl</kbd> + <kbd>`</kbd>  快捷键唤出/隐藏），输入 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">--version</span></code> 回车。如下所示：</p></li>
+</ol>
+<p><img alt="sphinx-version" src="_images/sphinx-version.gif" /></p>
+<p>如果一切正常，同学们将会看到已安装 Sphinx 版本号（这里显示的版本是 2.3.0），这说明 Sphinx 开发环境已正确部署至计算机，现在请移步到下一小节学习如何创建<a class="reference external" href="#2-%E7%AC%AC%E4%B8%80%E4%B8%AA-sphinx-%E9%A1%B9%E7%9B%AE">第一个 Sphinx 项目</a>。</p>
+</div>
+</div>
+<div class="section" id="macos">
+<h3><span class="section-number">2.1.2. </span>macOS 环境配置<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
+<p>在mac上配置 Sphinx，可以通过 Anaconda，Homebrew，MacPorts 等方式来完成，这里介绍使用 Anaconda，Pip，和 Homebrew 完成 Sphinx 安装与配置，三种方式选其一即可。</p>
+<p>这三种相同点在于都是软件包管理工具，不同点在于 Homebrew 是一个通用的软件包管理工具，终端安装的很多软件包都可以用它来安装；Pip 一般安装一些与 Python 环境相关的软件包，conda 功能与 Pip 类似，目的是为了解决对 Python 以外的依赖环境问题，Pip 在任何环境中安装 Python 包; conda 在 conda 环境中装任何包。</p>
+<div class="section" id="id2">
+<h4><span class="section-number">2.1.2.1. </span>Anaconda 安装与配置 （推荐）<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p><strong>注意：</strong></p>
+<ul class="simple">
+<li><p>以下步骤不需要同学们预先安装 Python 解释器，而是直接使用 Anaconda 内集成的 Python 解释器；</p></li>
+<li><p>如果同学们先前已经安装过单独的 Python 解释器（运行 Sphinx 必须预先安装 Python 3.5 及以上版本），可查看下一小节 - 使用 Pip 安装 Sphinx；</p></li>
+<li><p>更加推荐使用 Anaconda 来完成 Sphinx 开发环境配置，因为 conda 将几乎所有的工具、第三方库都当做 Package 对待，甚至包括 Python 和 conda 自身，它可以帮助我们方便地管理自己的 Python 开发环境，不仅能够将不同开发项目所依赖的开发环境完全独立开来，还可轻易地复制整个 Python 环境到其他机器上。</p></li>
+</ul>
+</div></blockquote>
+<ol class="simple">
+<li><p>打开 <a class="reference external" href="https://www.anaconda.com/distribution/">Anaconda 官方下载页</a>，下载适合的安装包：</p></li>
+</ol>
+<p><img alt="anaconda-download-mac" src="_images/anaconda-download-mac.jpg" /></p>
+<blockquote>
+<div><p><strong>提示：</strong> 如果官网下载速度较慢，可到清华大学开源软件镜像站下载 <a class="reference external" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">Anaconda 安装包</a>。</p>
+</div></blockquote>
+<ol class="simple">
+<li><p>下载完成后，运行可执行文件进行安装。</p></li>
+</ol>
+<blockquote>
+<div><p><strong>注意：</strong> 请在 “Advanced Options” 中将勾选 <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Anaconda</span> <span class="pre">to</span> <span class="pre">my</span> <span class="pre">PATH</span> <span class="pre">environment</span> <span class="pre">variable</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Register</span> <span class="pre">Anaconda</span> <span class="pre">as</span> <span class="pre">my</span> <span class="pre">defaylt</span> <span class="pre">Python</span> <span class="pre">3.7</span></code> 两个可选选项：</p>
+<ul>
+<li><p><strong>第一个选项</strong> 会将 Anaconda 的安装目录添加至系统环境变量的 path 中，有利于我们之后在 VS Code 中快速激活 conda 环境，以及直接使用 base 环境中已安装的库和脚本，简化操作流程。</p>
+<ul>
+<li><p>如上图红字所示，Anaconda 官方不建议勾选此选项，而建议使用 Anaconda Prompt (或 Anaconda Powershell Prompt，以下将两者统称为 Anaconda Prompt) 。这是因为勾选此选项会将 Anaconda 的若干目录添加至 path 目录中的最前面；如果用户之前已经安装了其他 Python 解释器，勾选此选项会导致用户直接调用 Python 时优先调用 Anaconda 内置的 Python 解释器，而不是用户单独安装的 Python 解释器，如下图所示：</p>
+<p><img alt="check-anaconda-mac" src="_images/check-anaconda-mac.jpg" /></p>
+</li>
+</ul>
+</li>
+<li><p><strong>第二个选项</strong> 可使其他 Python 开发工具（如 VS Code）自动探测到 Anaconda。</p></li>
+</ul>
+</div></blockquote>
+<ol class="simple">
+<li><p>Anaconda 预装了 Sphinx。完成1-2步 Anaconda 安装后，检查 Sphinx 是否已安装：</p></li>
+</ol>
+<p>点击启动台-其他-终端，输入<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code>，回车：</p>
+<p>此指令会列出当前 conda 环境 (base) 下所有已安装的包，正常情况下可以看到若干以 Sphinx 开头的包：</p>
+<p><img alt="conda-list-mac" src="_images/conda-list-mac.jpg" /></p>
+<p><img alt="conda-list-sphinx-mac" src="_images/conda-list-sphinx-mac.png" /></p>
+<ol class="simple">
+<li><p>（可选）Sphinx 预装在 Anaconda 的默认环境下，同学们可以进一步通过 Anaconda Navigator 中检查 Sphinx 包配置情况，安装更多的包。</p></li>
+</ol>
+<blockquote>
+<div><p>提示 ：Anaconda 通常数月才更新一次，但其内部包含的包通常具有更快的更新频次，可使用 Anaconda 的包管理器对包进行单独更新。这里可通过 Anaconda Prompt 输入命令行操作，也可以通过 Anaconda Navigator 进行可视化操作，相对上手更快。</p>
+</div></blockquote>
+<p>点击启动台 - Anaconda Navigator，左侧菜单选择 Environments，检索框输入 Sphinx ，得到以下列表：</p>
+<p>进一步勾选，点击右下角 Apply 进行安装。</p>
+<p><img alt="conda-navigator-mac" src="_images/conda-navigator-mac.jpg" /></p>
+</div>
+<div class="section" id="pip">
+<h4><span class="section-number">2.1.2.2. </span>Pip 安装与配置<a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>使用 Pip 配置 Sphinx 也是方便快捷的方式。如果同学们先前安装过单独的 Python 解释器（运行 Sphinx 必须预先安装 Python 3.5 及以上版本），可直接使用第4步中的命令行安装 Sphinx。</p>
+<blockquote>
+<div><p>提示：如果不确定自己是安装过，可以在终端输入<code class="docutils literal notranslate"><span class="pre">pip</span></code>进行检测。如果出现<code class="docutils literal notranslate"><span class="pre">-bash:</span> <span class="pre">/usr/local/bin/pip:</span> <span class="pre">No</span> <span class="pre">such</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">directory</span></code> 提示说明，则尚未安装 Pip，需要进行第2-3步。</p>
+</div></blockquote>
+</li>
+<li><p>终端输入<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">easy_install</span> <span class="pre">pip</span></code>，输入 mac 密码，进入安装：</p></li>
+</ol>
+<p><img alt="pip-install-mac" src="_images/pip-install-mac.jpg" /></p>
+<ol class="simple">
+<li><p>最终显示<code class="docutils literal notranslate"><span class="pre">Finished</span> <span class="pre">processing</span> <span class="pre">dependencies</span> <span class="pre">for</span> <span class="pre">pip</span></code>，Pip 配置完成。可以通过<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">--version</span></code> 查看 Pip 版本。</p></li>
+</ol>
+<p><img alt="pip-complete-mac" src="_images/pip-complete-mac.jpg" />4. 终端运行<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span></code>，完成安装。</p>
+<p><img alt="pip-sphinx-mac" src="_images/pip-sphinx-mac.jpg" /></p>
+<ol class="simple">
+<li><p>完成安装后，可以检查 Sphinx 配置情况：</p></li>
+</ol>
+<p>终端输入<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code>，回车，正常情况下可以看到若干以 Sphinx 开头的包：</p>
+<p><img alt="pip-list-mac" src="_images/pip-list-mac.jpg" /></p>
+<p><img alt="pip-check-mac" src="_images/pip-check-mac.jpg" /></p>
+</div>
+<div class="section" id="homebrew">
+<h4><span class="section-number">2.1.2.3. </span>Homebrew 安装与配置<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h4>
+<p>Homebrew 可以视为套件管理器。它是一款 Mac OS 平台下的软件包管理工具，拥有安装、卸载、更新、查看、搜索等很多实用的功能，不需要关注各种依赖和文件路径的情况。配置好 Homebrew 后，安装包、补充缺失的包比较比较便捷。</p>
+<ol class="simple">
+<li><p>Homebrew 依赖于 Xcode Command Line Tools，所以会自动先安装 Xcode Command Line Tools；如果有报错，也可以用命令手动安装：<code class="docutils literal notranslate"><span class="pre">xcode-select</span> <span class="pre">--install</span></code>。</p></li>
+</ol>
+<p><img alt="homebrew-xcode-mac" src="_images/homebrew-xcode-mac.jpg" /></p>
+<ol class="simple">
+<li><p>前往 <a class="reference external" href="https://brew.sh">homebrew 官网</a>，复制首页代码行到终端执行。</p></li>
+</ol>
+<p><img alt="homebrew-website-mac" src="_images/homebrew-website-mac.jpg" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span>
+</pre></div>
+</div>
+<p><img alt="homebrew-install-mac" src="_images/homebrew-install-mac.jpg" /></p>
+<p>中间需要输入一次 mac 密码：</p>
+<p><img alt="homebrew-password-mac" src="_images/homebrew-password-mac.jpg" /></p>
+<blockquote>
+<div><p>提示：<code class="docutils literal notranslate"><span class="pre">-bash:</span> <span class="pre">brew:</span> <span class="pre">command</span> <span class="pre">not</span> <span class="pre">found</span></code> 是一种常见报错，解决办法是在终端输入 <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">vim</span> <span class="pre">.bash_profile</span></code>，添加 <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PATH=&quot;/usr/local/bin:$PATH&quot;</span></code>；最后输入 <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">.bash_profile</span></code> 使配置生效。</p>
+</div></blockquote>
+<ol class="simple">
+<li><p>出现<code class="docutils literal notranslate"><span class="pre">Installation</span> <span class="pre">successful!</span></code>的提示即为 Homebrew 配置完成。</p></li>
+</ol>
+<p><img alt="homebrew-complete-mac" src="_images/homebrew-complete-mac.jpg" /></p>
+<ol class="simple">
+<li><p>完成 Homebrew 配置后，终端输入<code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">sphinx-doc</span></code>，安装 Sphinx 。</p></li>
+</ol>
+<p><img alt="homebrew-sphinx-mac" src="_images/homebrew-sphinx-mac.jpg" /></p>
+<ol class="simple">
+<li><p>完成安装后，可以检查 Sphinx 配置情况：</p></li>
+</ol>
+<p>终端输入<code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">list</span></code>，回车，正常情况下可以看到 Sphinx 的包：</p>
+<p><img alt="homebrew-list-mac" src="_images/homebrew-list-mac.jpg" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h4><span class="section-number">2.1.2.4. </span>Visual Studio Code 安装与配置<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>打开 <a class="reference external" href="https://code.visualstudio.com/Download">Visual Studio Code 官网</a>，下载适合的安装包，可以勾选全部复选框完成安装任务。</p></li>
+</ol>
+<img src="images/vscode-download-mac.jpg" alt="vscode-download-mac" style="zoom:50%;" /><ol class="simple">
+<li><p>完成安装后打开 VS Code，在  <em><strong>Extentions</strong></em> 中安装 <em><strong>Python</strong></em> 和 <em><strong>reStructuredText</strong></em> 拓展。</p></li>
+</ol>
+<p><img alt="vscode-extension2-mac" src="_images/vscode-extension2-mac.jpg" /></p>
+<p><img alt="vscode-extension1-mac" src="_images/vscode-extension1-mac.jpg" /></p>
+</div>
+<div class="section" id="id4">
+<h4><span class="section-number">2.1.2.5. </span>VS Code 调用 Sphinx (Anaconda)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>完成以上步骤后，已经基本搭建好了一个基于 Anaconda 和 VS Code 的一体化 Sphinx 工作台。在这一环节中，同学们可以检测自己的 Sphinx 开发环境， 为下一节 “第一个 Sphinx 项目” 做好准备。</p>
+<ol class="simple">
+<li><p>在计算机任意位置新建一个文件夹，命名为 “learn-sphinx”，拖至 VS Code 打开。</p></li>
+</ol>
+<p><img alt="create-folder-mac" src="_images/create-folder-mac.jpg" /></p>
+<p>文件夹会显示在左侧边栏，下一小节创建项目的文件将会储存在这个文件夹。</p>
+<p><img alt="show-folder-mac" src="_images/show-folder-mac.jpg" /></p>
+<ol>
+<li><p>打开 VS Code 窗口的集成 Terminal（可使用 <kbd>Ctrl</kbd> + <kbd>`</kbd>  快捷键唤出/隐藏），输入 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">--version</span></code> 回车:</p>
+<p><img alt="check-version-mac" src="_images/check-version-mac.jpg" /></p>
+</li>
+</ol>
+<p>如果一切正常，同学们将会看到已安装 Sphinx 版本号（这里显示的版本是 2.3.0），这说明 Sphinx 开发环境已正确部署至计算机，现在请移步到下一小节学习如何创建<a class="reference external" href="#2-%E7%AC%AC%E4%B8%80%E4%B8%AA-sphinx-%E9%A1%B9%E7%9B%AE">第一个 Sphinx 项目</a>。</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id5">
+<h2><span class="section-number">2.2. </span>第一个 Sphinx 项目<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>注意：</strong> 以下内容以 Windows 作为操作演示平台，macOS 上的操作基本一致。</p>
+</div></blockquote>
+<p>前一小节我们利用 Anaconda 和 VS Code 搭建了一体化的 Sphinx 工作台，现在可以启动我们第一个Sphinx 项目了！</p>
+<div class="section" id="id6">
+<h3><span class="section-number">2.2.1. </span>创建项目<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Sphinx 提供了一个快速创建 Sphinx 项目的脚本 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>，这个脚本相当于一个设置向导，它会询问我们一系列问题，并根据我们的回答生成此项目的文档源目录及默认配置文件 conf.py，如图所示：</p>
+<p><img alt="sphinx-quickstart" src="_images/sphinx-quickstart.png" /></p>
+<blockquote>
+<div><p><strong>提示：</strong> 所有的项目配置均可在之后通过项目配置文件 <em>conf.py</em> 修改。</p>
+</div></blockquote>
+<p>完成上述步骤后，当前路径下会出现如下文件/文件夹：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├─ make.bat   # Window下的编译脚本
+├─ Makefile   # Linux下的Makefile文件
+├─ build      # make编译后产生的导出文件目录
+└─ source     # 文档源码目录
+    ├─  conf.py     # 项目配置文件
+    ├─  index.rst   # 文档源文件入口
+    ├─ _static      # 用于存放参与编译的静态文件   
+    └─ _templates   # 用于存放项目的主题模板文件
+</pre></div>
+</div>
+<p>现在我们已经成功创建了一个 Sphinx 项目文件，下面的步骤便是为你的项目添加内容与进行装饰了！</p>
+<p>但在那之前，让我们看看尝试一下现在能否使用 Sphinx 导出些什么！在终端中输入<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>，回车；</p>
+<blockquote>
+<div><p><strong>注意：</strong></p>
+<ul class="simple">
+<li><p>Powershell（Windows 下 VS Code 的默认终端）需要使用 <code class="docutils literal notranslate"><span class="pre">.\make</span> <span class="pre">html</span></code>，<code class="docutils literal notranslate"><span class="pre">.\</span></code> 不可省略 。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> 会对 index.rst  及其关联文件进行编译，并在 <code class="docutils literal notranslate"><span class="pre">../build/html/</span></code>目录下生成 HTML 项目包。</p></li>
+</ul>
+</div></blockquote>
+<p><img alt="sphinx-make-html" src="_images/sphinx-make-html.png" /></p>
+<p>使用浏览器打开 <code class="docutils literal notranslate"><span class="pre">../learn-sphinx/build/html/</span></code>目录下的 index.html 文件，可以看到一个由 Sphinx 生成的简单网页：</p>
+<p><img alt="sphinx-basic-html" src="_images/sphinx-basic-html.png" /></p>
+<p>尽管我们还未向文档源文件目录中填充具体内容，但这个 “简陋的” 网页已经为我们展示了 Sphinx 生成网页的基本结构：</p>
+<p>页面左侧显示了我们的项目名称，并具有导航页和搜索框；页面主体上方有欢迎语，下方是项目创建时间、文档创建说明和页面源文件的链接。</p>
+<p>下面我们将学习如何组织我们的文档内容，包括撰写文本内容与定义文档结构。</p>
+</div>
+<div class="section" id="id7">
+<h3><span class="section-number">2.2.2. </span>组织内容<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Sphinx 使用 reStructuredText 作为默认标记语言，通常我们可以在 source 目录下添加 chapter1.rst、chapter2.rst 等源文件，用于撰写文档的不同章节，并使用 index.rst 对其他 rst 文件进行组织管理。</p>
+<blockquote>
+<div><p><strong>提示：</strong></p>
+<ul class="simple">
+<li><p>index.rst 是由 Sphinx 的文档主入口，它可被转换成文档的欢迎页；</p></li>
+<li><p>建议在 source 目录下新建一个 images 目录用于存放文档中需要插入的图片。</p></li>
+</ul>
+</div></blockquote>
+<p>我们将在下一章学习 reStructuredText 的语法，现在先请同学们从本教程的 <a class="reference external" href="https://github.com/dac-tutorial/DAC-Tutorial/tree/master/learn-sphinx">GitHub 仓库</a> 中获取 chapter1.rst、chapter2.rst、images/basic_screenshot.png 等文件，并将它们存放在我们的 <code class="docutils literal notranslate"><span class="pre">../learn-sphinx/source</span></code> 目录下。</p>
+<blockquote>
+<div><p><strong>提示：</strong> 若需要从 GitHub 仓库中获取单个文件，请在 GitHub 网页端打开该文件后，切换到 Raw 视图，然后右键另存即可。另外请注意 rst 文件会被默认识别为 txt 文件，需要手动在保存时进行修改；也可以在 <em>conf.py</em> 中将 txt 扩展名识别为 reStructuredText 文本（在下一小节会提到如何修改 <em>conf.py</em> ）。</p>
+<p><img alt="github-get-file" src="_images/github-get-file.gif" /></p>
+</div></blockquote>
+<p>完成后的目录结构如下所示：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├─ make.bat   # Window下的编译脚本
+├─ Makefile   # Linux下的Makefile文件
+├─ build      # make编译后产生的导出文件目录
+└─ source     # 文档源码目录
+    ├─ _static         # 用于存放参与编译的静态文件   
+    ├─ _templates      # 用于存放项目的主题模板文件
+    │
+    ├─ images          # 用于存放文档中需插入的图片
+    │    basic_screenshot.png  # 图片文件    
+    │
+    ├─ chapter1.rst    # 第一章文档源文件
+    ├─ chapter2.rst    # 第二章文档源文件
+    │
+    ├─ conf.py         # 项目配置文件 
+    └─ index.rst       # 文档源文件入口
+</pre></div>
+</div>
+<p>完成添加 chapter1.rst, chapter2.rst 等文件后，我们还需要在 index.rst 将这些文件包含进来，并定义我们的文档结构，现在使用 VS Code 对 index.rst 里的 toctree 做如下修改：</p>
+<div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> 2
+   <span class="nc">:caption:</span> Contents:
+   <span class="nc">:numbered:</span>
+
+   chapter1
+   chapter2
+</pre></div>
+</div>
+<p>其中，toctree 用来于产生目录表，numbered 表示章节编号，maxdepth 表示目录中只显示几层标题，之后空一行，在下面列出各 <code class="docutils literal notranslate"><span class="pre">.rst</span></code> 子文档，可以不加文件后缀，但要注意代码对齐，更多有关<code class="docutils literal notranslate"><span class="pre">toctree</span></code> 的内容可以参见<a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#toctree-directive"> Sphinx 官方文档</a>。</p>
+<p>修改完成后，我们再一次在终端中使用 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> 命令，并在浏览器中打开 <code class="docutils literal notranslate"><span class="pre">../learn-sphinx/build/html/</span></code>目录下的 index.html 文件，看看这次我们生成的网页有何不同！</p>
+<p><img alt="sphinx-build-html" src="_images/sphinx-build-html.png" /></p>
+</div>
+<div class="section" id="id8">
+<h3><span class="section-number">2.2.3. </span>修改配置<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>前一小节我们尝试了使用 Sphinx 默认配置发布了我们的 HTML 网页，现在我们来学习如何修改文档的格式与风格！</p>
+<p>Sphinx 项目的配置由 <em>conf.py</em> 文件所控制，如果项目是通过 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 脚本创建的，<em>conf.py</em> 将会被自动创建，存放在 <em>source</em> 目录下。</p>
+<p><img alt="sphinx-conf-py" src="_images/sphinx-conf-py.png" /></p>
+<p>如图所示，使用<code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 脚本自动创建的 <em>conf.py</em> 文件已经包含了该项目的一些基本属性和配置。我们可以通过修改 <em>conf.py</em> 的内容以修改 Sphinx 项目配置。</p>
+<p><em>conf.py</em> 中的配置主要包括项目信息、一般配置项以及 HTML 输出选项三大类：</p>
+<div class="section" id="project-information">
+<h4><span class="section-number">2.2.3.1. </span>项目信息 (Project information)<a class="headerlink" href="#project-information" title="Permalink to this headline">¶</a></h4>
+<p>由<code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>脚本创建的 <em>conf.py</em> 文件已经包含了项目名称 (project)、版权声明 (copyright)、作者姓名 (author) 以及项目版本 (release) 等项目信息 (Project information)。</p>
+<p>目前我们的项目属性（内容是对<code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>若干问题回答）如下所示，：</p>
+<p><img alt="project-information" src="_images/project-information.png" /></p>
+<p>此外，可以注意到 release 所在行之上的一条注释，实际上 release 指的是完整的项目版本，除了项目的主要版本 (version) 外，通常还包括 alpha/beta/rc 等标签，例如目前最新的 Python 文档版本号便是 3.9.0a2。</p>
+<p>项目主要版本 (version) 也可单独作为一条属性添加在 <em>conf.py</em> 中，这样会在之后导出的文档中，在  version 和 release 之间提供分隔。</p>
+<p>现在我们可对这些项目属性进行一些改动：</p>
+<p><img alt="project-information-modified" src="_images/project-information-modified.png" /></p>
+</div>
+<div class="section" id="general-configuration">
+<h4><span class="section-number">2.2.3.2. </span>一般配置项 (General configuration)<a class="headerlink" href="#general-configuration" title="Permalink to this headline">¶</a></h4>
+<p>一般配置项 (General configuration) 的内容十分丰富，我们这里只介绍最常用的几个：</p>
+<ul class="simple">
+<li><p><strong>extensions:</strong> 配置 Sphinx 的扩展，内容是 extensions 模块下的字符串列表。</p></li>
+<li><p><strong>source_suffix:</strong> 定义源文件的文件扩展名，该值可以是字典映射文件扩展名到文件类型，默认为 <code class="docutils literal notranslate"><span class="pre">source_suffix</span> <span class="pre">=</span> <span class="pre">{'.rst':</span> <span class="pre">'restructuredtext'}</span></code>。</p></li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="sphinx-markdown">
+<h5><span class="section-number">2.2.3.2.1. </span>练习1：为 Sphinx 项目添加 Markdown 支持<a class="headerlink" href="#sphinx-markdown" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><p><strong>提示：</strong></p>
+<ul class="simple">
+<li><p>Markdown 是一种与 reStructuredText 类似的标记语言，其语法甚至比 reStructuredText 更加简单一些。Markdown 是目前最受欢迎的标记语言，GitHub、Stack Overflow、reddit 以及知乎、简书等网站均支持这种格式。本教程的博客提供了一个 <a class="reference external" href="https://dac-tutorial.github.io/Markdown-%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">Markdown 简明教程</a>，欢迎同学们学习！</p></li>
+<li><p>Sphinx 默认仅支持 reStructuredText 标记语言，但我们可以通过安装 recommonmark 源解析器扩展使其支持添加 Markdown 标记语言。安装方法可参阅 <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/markdown.html">Sphinx 官网文档</a>。</p></li>
+</ul>
+</div></blockquote>
+<p>请尝试为我们的 <em><strong>learn-sphinx</strong></em> 项目添加 Markdown 支持，并在原文档目录下添加一个由 <em><strong>index.rst</strong></em> 管理的 <em><strong>chapter3.md</strong></em> 文件（从本教程的 <a class="reference external" href="https://github.com/DAC-Tutorial/DAC-Tutorial/tree/master/learn-sphinx/source">GitHub 仓库</a> 获取该文件）。</p>
+<blockquote>
+<div><p><strong>步骤：</strong></p>
+<ol class="simple">
+<li><p>首先，使用 conda 工具安装 recommonmark 扩展，在 Anaconda Prompt 中执行命令:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">recommonmark</span>
+</pre></div>
+</div>
+<p><img alt="conda-install-recommonmark" src="_images/conda-install-recommonmark.png" /></p>
+<blockquote>
+<div><p>**提示：**非 Anaconda 环境下可使用 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">recommonmark</span></code> 安装 recommonmark 扩展。</p>
+</div></blockquote>
+<ol class="simple">
+<li><p>然后，对 <em><strong>learn-sphinx</strong></em> 项目 <em><strong>conf.py</strong></em> 做如下修改：</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;recommonmark&#39;</span><span class="p">]</span>
+
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+ <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><img alt="extensions_source_suffix" src="_images/extensions-source_suffix.png" /></p>
+<p>这里我们通过添加 <code class="docutils literal notranslate"><span class="pre">recommonmark</span></code>扩展为 Sphinx 开启了 Markdown 支持，并将 <code class="docutils literal notranslate"><span class="pre">.rst</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.txt</span></code> 映射到 <code class="docutils literal notranslate"><span class="pre">'restructuredtext'</span></code> 文件类型，将 <code class="docutils literal notranslate"><span class="pre">.md</span></code>映射到 Markdown 文件类型。</p>
+<ol class="simple">
+<li><p>接着，请同学们从本教程的 <a class="reference external" href="https://github.com/DAC-Tutorial/DAC-Tutorial/tree/master/learn-sphinx/source">GitHub 仓库</a> 获取 <em><strong>chapter3.md</strong></em> 文件，并将其存放在我们的 ../learn-sphinx/source 目录下。</p></li>
+<li><p>最后，修改 <em><strong>index.rst</strong></em> 文件，将 <em><strong>chapter3.md</strong></em> 添加到文件目录下：</p></li>
+</ol>
+<p><img alt="reorganize-contents" src="_images/reorganize-contents.png" /></p>
+<p><strong>特别注意：</strong> 在 <em>index.rst</em> 种引用 reStructuredText 文件时可省略<code class="docutils literal notranslate"><span class="pre">.rst</span></code> 扩展名，但引用 Markdown 文件时不可省略 <code class="docutils literal notranslate"><span class="pre">.md</span></code> 扩展名。为确保引用格式正确，建议在一个文档内引用不同格式文本时不省略<code class="docutils literal notranslate"><span class="pre">.rst</span></code> 扩展名。</p>
+</div></blockquote>
+<hr class="docutils" />
+<ul class="simple">
+<li><p><strong>language:</strong> 文档编写的语言代码，Sphinx自动生成的任何文本都将使用该语言。目前 Sphinx 支持的语言及其代码可在 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language">Sphinx 官方文档</a>上查询到，我们平时比较常用的有英文和简体中文两种，其语言代码分别是<code class="docutils literal notranslate"><span class="pre">en</span></code> 与<code class="docutils literal notranslate"><span class="pre">zh_CN</span></code>。</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="html-options-for-html-output">
+<h4><span class="section-number">2.2.3.3. </span>HTML 输出选项 (Options for HTML output)<a class="headerlink" href="#html-options-for-html-output" title="Permalink to this headline">¶</a></h4>
+<p>这些选项会影响 Sphinx 中 HTML 文档的输出，以及其他使用 Sphinx 的 HTMLWriter 类的文档构建器。</p>
+<p>这里只介绍一个最常用的 <strong>html_theme</strong> ，该配置项会影响 Sphinx 编译输出 HTML 的主题风格，用户通过修改 <strong>html_theme</strong> 的值以修改 HTML 主题。</p>
+<p><img alt="html_theme-default" src="_images/html_theme-default.png" /></p>
+<p>Sphinx 默认的 HTML 主题为 alabaster，alabaster 是 Sphinx 的内置主题之一，Sphinx 内置主题还包括 <strong>basic</strong>、<strong>classic</strong>、<strong>sphinxdoc</strong>、<strong>scrolls</strong>、<strong>agogo</strong>、<strong>nature</strong>、<strong>pyramid</strong>、<strong>haiku</strong>、<strong>traditional</strong>、<strong>epub</strong>、<strong>bizstyle</strong> 等 11 种。</p>
+<p>此外，还有不少第三方主题（例如 <strong>sphinx_rtd_theme</strong>）可通过额外安装后使用，更多有关主题设置与定制的内容请参考 <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/theming.html">Sphinx 官方文档</a>，之后的 “<strong>Sphinx 主题定制</strong>” 学习专题也会对此有进一步介绍。</p>
+<hr class="docutils" />
+<div class="section" id="sphinx-html">
+<h5><span class="section-number">2.2.3.3.1. </span>练习2：为 Sphinx-HTML 网页换一种风格<a class="headerlink" href="#sphinx-html" title="Permalink to this headline">¶</a></h5>
+<p>请在完成 <strong>练习1：为 Sphinx 项目添加 Markdown 支持</strong> 的基础上，修改 Sphinx 项目的 HTML 的主题为任一 Sphinx 内置主题，并将其发布。</p>
+<blockquote>
+<div><p><strong>参考样例：</strong></p>
+<p><img alt="html-demo-scrolls" src="_images/html-demo-scrolls.jpg" /></p>
+<p>样例源文件存放在本教程的 <a class="reference external" href="https://github.com/dac-tutorial/sphinx-html-demo">GitHub 仓库</a> 中，其 HTML 主题为 Sphinx 内置的 <strong>scrolls</strong>。</p>
+<p><img alt="html_theme-modified" src="_images/html_theme-modified.png" /></p>
+</div></blockquote>
+<hr class="docutils" />
+<p>本小节只介绍了一些比较常用的 Sphinx 项目配置属性，更多内容请参考 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html">Sphinx 官方文档</a>。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3><span class="section-number">2.2.4. </span>发布文档<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>在前面三个小节中，我们已经多次使用 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> 将我们的 Sphinx 项目发布成本地的 HTML 网页。</p>
+<p>实际上，我们也可以使用 Sphinx 的 <a class="reference external" href="http://www.sphinx-doc.org/en/master/man/sphinx-build.html"><code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code></a> 命令达到相同的效果，删除先前用 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> 生成的<code class="docutils literal notranslate"><span class="pre">../build/html/</span></code>目录内的全部文件，然后在终端中输入下面这行命令：</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx-build</span> <span class="n">-b</span> <span class="n">html</span> <span class="p">&lt;</span><span class="n">sourcedir</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="n">builddir</span><span class="p">&gt;</span>
+
+<span class="c"># -b 是创建工具的选项，html 指创建的是 html 文件</span>
+<span class="c"># &lt;sourcedir&gt; 指项目的源目录，默认应填 source </span>
+<span class="c"># &lt;builddir&gt; 指导出文档的目录，默认应填 build</span>
+</pre></div>
+</div>
+<p><img alt="sphinx-build" src="_images/sphinx-build.png" /></p>
+<p>命令执行完成后，网页文件会存放在指定的导出目录下。实际上，<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> 即是利用 Makefile 和 make.bat 批处理文件简化了 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> 的操作，两者在本质上基本相同。</p>
+<p>教程第三部分的 “<strong>Sphinx 文档发布</strong>” 学习专题将进一步介绍如何使用 Sphinx 构建 PDF、LaTeX 等格式的文档，此专题还介绍了如何将 Sphinx 发布的网页托管至云端，以实现 HTML 文档的公网访问。</p>
+<hr class="docutils" />
+<p>至此，同学们应已初步了解了文档代码化的基本思想，并着手创建、完善了自己的第一个 Sphinx 项目。下面我们还将学习 reStructuredText 和 Markdown 的基础语法，更多的进阶内容也将以学习专题的形式呈现，欢迎同学们继续学习！</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rst-guide.html" class="btn btn-neutral float-right" title="3. reStructuredText 语法指南" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="1. 引言：文档代码化" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, PKU
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <link rel="stylesheet" type="text/css"
+  href="_static/custom.css">
+
+
+
+</body>
+</html>
