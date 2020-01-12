@@ -107,29 +107,30 @@
 <li class="toctree-l4"><a class="reference internal" href="#windows-vs-code-git">7.2.2.1. 安装适用于 Windows 的 VS Code 和 Git</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#remote-wsl">7.2.2.2. 安装 Remote - WSL 扩展</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#shell-wsl">7.2.2.3. 将默认终端 Shell 更改为 WSL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">7.2.2.4. 文件存储位置</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#wsl-ubuntu-jekyll">7.2.3. 使用 WSL-Ubuntu 安装 Jekyll</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ruby">7.2.3.1. 安装 Ruby</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ruby-gems">7.2.3.2. 更新 Ruby gems</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">7.2.3.3. 安装 Jekyll</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id6">7.2.3.4. 检查 Jekyll 安装</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id7">7.2.3.5. 附录：Jekyll 常用命令</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">7.2.3.3. 安装 Jekyll</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">7.2.3.4. 检查 Jekyll 安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">7.2.3.5. 附录：Jekyll 常用命令</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id8">7.2.4. 小练习：第一个 Jekyll 站点</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id9">7.2.4.1. 创建 Jekyll 项目目录</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">7.2.4. 小练习：第一个 Jekyll 站点</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id10">7.2.4.1. 创建 Jekyll 项目目录</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#index-html">7.2.4.2. 添加 index.html 文件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id10">7.2.4.3. 发布 Jekyll 测试站点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">7.2.4.3. 发布 Jekyll 测试站点</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id11">7.3. 使用 Jekyll 搭建个人博客</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id12">7.3.1. 创建博客仓库</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">7.3.2. 修改博客配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id14">7.3.3. 添加博客内容</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id15">7.3.4. 其他博客功能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">7.3. 使用 Jekyll 搭建个人博客</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">7.3.1. 创建博客仓库</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">7.3.2. 修改博客配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">7.3.3. 添加博客内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">7.3.4. 其他博客功能</a></li>
 </ul>
 </li>
 </ul>
@@ -235,34 +236,24 @@
 </div></blockquote>
 <div class="section" id="linux-windows">
 <h4><span class="section-number">7.2.1.1. </span>启用 “适用于 Linux 的 Windows 子系统” 可选功能<a class="headerlink" href="#linux-windows" title="永久链接至标题">¶</a></h4>
-<ol class="simple">
-<li><p>以管理员身份打开 PowerShell 并运行：</p></li>
-</ol>
+<p>⑴ 以管理员身份打开 PowerShell 并运行：</p>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Enable-WindowsOptionalFeature</span> <span class="n">-Online</span> <span class="n">-FeatureName</span> <span class="n">Microsoft-Windows-Subsystem-Linux</span>
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>出现提示后，重启计算机即可。</p></li>
-</ol>
+<p>⑵ 出现提示后，重启计算机即可。</p>
 </div>
 <div class="section" id="linux-ubuntu">
 <h4><span class="section-number">7.2.1.2. </span>获取 Linux 分发版 (Ubuntu)<a class="headerlink" href="#linux-ubuntu" title="永久链接至标题">¶</a></h4>
-<ol class="simple">
-<li><p>打开 Microsoft Store，搜索 “Linux” ，选择 Ubuntu</p></li>
-</ol>
+<p>⑴ 打开 Microsoft Store，搜索 “Linux” ，选择 Ubuntu</p>
 <p><img alt="microsoft-store-linux" src="_images/microsoft-store-linux.png" /></p>
-<ol class="simple">
-<li><p>在分发版的页面中，选择“获取 (Get)”，然后“安装 (Install)”</p></li>
-</ol>
+<p>⑵ 在分发版的页面中，选择“获取 (Get)”，然后“安装 (Install)”</p>
 <p><img alt="microsoft-store-ubuntu" src="_images/microsoft-store-ubuntu.png" /></p>
 </div>
 <div class="section" id="id3">
 <h4><span class="section-number">7.2.1.3. </span>初始化 Linux 分发版 (Ubuntu)<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h4>
 <p>安装 Linux 分发版后，必须先初始化一次后才能使用，步骤如下：</p>
-<ol class="simple">
-<li><p>启动 WSL，首次运行新安装的分发版时，会打开一个控制台窗口，其中指出需要等待一两分钟时间来完成安装。</p></li>
-<li><p>安装完成后，系统会提示创建新的用户帐户（及其密码）</p></li>
-</ol>
+<p>⑴ 启动 WSL，首次运行新安装的分发版时，会打开一个控制台窗口，其中指出需要等待一两分钟时间来完成安装。</p>
+<p>⑵ 安装完成后，系统会提示创建新的用户帐户（及其密码）</p>
 <blockquote>
 <div><p><strong>注意：</strong></p>
 <ul class="simple">
@@ -291,78 +282,69 @@
 <div><p>命令行也被称为 Bash Shell、终端、控制台、命令行接口 (CLI)，或对于 Windows 更常见的命令提示符，这些术语常常互换使用。</p>
 </div></blockquote>
 <p><img alt="wsl-ubuntu-shell" src="_images/wsl-ubuntu-shell.png" /></p>
-<ol class="simple">
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code> 命令：当前工作目录</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clear</span></code> 命令：清空当前屏内容</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code> 命令：切换目录（Linux 中的根目录被称为<code class="docutils literal notranslate"><span class="pre">root</span></code>目录，使用<code class="docutils literal notranslate"><span class="pre">/</span></code>表示）</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code> 命令：查看当前目录下的文件（可使用<code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>查看文件详情）</p></li>
-</ol>
+</ul>
 <p><img alt="linux-ls" src="_images/linux-ls.png" /></p>
-<ol class="simple">
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">mkdir</span></code> 命令：创建文件夹</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rmdir</span></code> 命令：删除文件夹（需要先切换至上层目录，键入几个字符后按 Tab 键会自动完成文件名或路径。）</p></li>
-</ol>
+</ul>
 <p><img alt="linux-mkdir-rmdir" src="_images/linux-mkdir-rmdir.png" /></p>
-<ol class="simple">
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cp</span></code> 命令：复制文件</p></li>
-</ol>
+</ul>
 <p><img alt="linux-cp" src="_images/linux-cp.png" /></p>
-<ol class="simple">
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cat</span></code> 命令：查看文本内容</p></li>
-</ol>
+</ul>
 <p><img alt="linux-cat" src="_images/linux-cat.png" /></p>
-<ol class="simple">
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">diff</span></code> 命令：查看文件差异（修改<code class="docutils literal notranslate"><span class="pre">file2.txt</span></code>后比较）</p></li>
-</ol>
+</ul>
 <p><img alt="linux-diff" src="_images/linux-diff.png" /></p>
-<ol class="simple">
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">head</span></code> 命令：查看文件头（可加参数<code class="docutils literal notranslate"><span class="pre">-n</span></code>）</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tail</span></code> 命令：查看文件尾（可加参数<code class="docutils literal notranslate"><span class="pre">-n</span></code>）</p></li>
-</ol>
+</ul>
 <p><img alt="linux-head-tail" src="_images/linux-head-tail.png" /></p>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">wc</span></code> 命令：统计字符</p></li>
-</ol>
 <ul class="simple">
-<li><p>默认为：<code class="docutils literal notranslate"><span class="pre">&lt;行数-l&gt;</span> <span class="pre">&lt;单词数-w&gt;</span> <span class="pre">&lt;字符数-c&gt;</span> <span class="pre">&lt;文件名&gt;</span>&#160; </code>，可加参数进行限定）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wc</span></code> 命令：统计字符（默认为：<code class="docutils literal notranslate"><span class="pre">&lt;行数-l&gt;</span> <span class="pre">&lt;单词数-w&gt;</span> <span class="pre">&lt;字符数-c&gt;</span> <span class="pre">&lt;文件名&gt;</span>&#160; </code>，可加参数限定）</p></li>
 </ul>
 <p><img alt="linux-wc" src="_images/linux-wc.png" /></p>
-<ol class="simple">
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rm</span></code> 命令：删除文件（注意：Linux 没有 “回收站” 机制，直接使用<code class="docutils literal notranslate"><span class="pre">rm</span></code>要谨慎）</p></li>
-</ol>
+</ul>
 <p><img alt="linux-rm" src="_images/linux-rm.png" /></p>
-<ol class="simple">
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">mv</span></code> 命令：移动文件或重命名文件（注意：文件夹名也是大小写敏感的！）</p></li>
-</ol>
+</ul>
 <p><img alt="linux-mv-1" src="_images/linux-mv-1.png" /></p>
 <p><img alt="linux-mv-2" src="_images/linux-mv-2.png" /></p>
-<ol class="simple">
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">less</span></code> 命令：浏览文件（可移动光标），点击字母<code class="docutils literal notranslate"><span class="pre">q</span></code>退出</p></li>
-</ol>
+</ul>
 <p><img alt="linux-less-1" src="_images/linux-less-1.png" /></p>
 <p><img alt="linux-less-2" src="_images/linux-less-2.png" /></p>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">chmod</span></code> 命令：修改文件读写权限</p></li>
-</ol>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">chmod</span></code> 命令分为三部分：u作者，g小组成员，o其他成员；</p></li>
-<li><p>每一部分里面都有：r读，w写，x运行三个部分；</p></li>
-<li><p>如果想修改权限的话 chmod u-r 文件名称 代表修改了作者的权限，不能够读。如果想添加权限 chmod u+r 文件名称 代表允许可读权限。如果使用 chmod g-r 文件名称 代表小组成员和其他人都不能读。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chmod</span></code> 命令：修改文件读写权限</p></li>
 </ul>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">chmod</span></code> 命令分为三部分：u作者，g小组成员，o其他成员；每一部分里面都有：r读，w写，x运行三个部分；如果想修改权限的话 chmod u-r 文件名称 代表修改了作者的权限，不能够读。如果想添加权限 chmod u+r 文件名称 代表允许可读权限。如果使用 chmod g-r 文件名称 代表小组成员和其他人都不能读。<code class="docutils literal notranslate"><span class="pre">chmod</span></code> 也可以通过二进制数（转十进制）进行操作</p>
+</div></blockquote>
 <p><img alt="linux-chmod-1" src="_images/linux-chmod-1.png" /></p>
 <p><img alt="linux-chmod-2" src="_images/linux-chmod-2.png" /></p>
 <p><img alt="linux-chmod-3" src="_images/linux-chmod-3.png" /></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">chmod</span></code> 也可以通过二进制数（转十进制）进行操作</p></li>
-</ul>
 <p><img alt="linux-chmod-444" src="_images/linux-chmod-4.png" /></p>
 <ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">grep</span></code> 命令：对文本文件进行搜索</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">grep</span></code> 命令可以对文本文件的内容进行搜索，使用正则表达式，能够更好的查找想要的内容，还可以使用命令组合来实现更好的定位。</p></li>
-</ul>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grep</span></code> 命令：对文本文件进行搜索</p></li>
 </ol>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">grep</span></code> 命令可以对文本文件的内容进行搜索，使用正则表达式，能够更好的查找想要的内容，还可以使用命令组合来实现更好的定位。</p>
+</div></blockquote>
 <p><img alt="linux-grep" src="_images/linux-grep.png" /></p>
 </div>
 </div>
@@ -371,11 +353,8 @@
 <p>VS Code 内置的命令行可以将它与 WSL Linux 发行版本集成，同时在代码编辑器与 Bash 和 PowerShell 工具之间建立无缝工作流（请在安装 VS Code 时将 VS Code 添加至 path）。</p>
 <div class="section" id="windows-vs-code-git">
 <h4><span class="section-number">7.2.2.1. </span>安装适用于 Windows 的 VS Code 和 Git<a class="headerlink" href="#windows-vs-code-git" title="永久链接至标题">¶</a></h4>
-<ol class="simple">
-<li><p>下载适用于 Windows 的 VS Code：<a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com</a>。</p></li>
-<li><p>首次打开 VS Code 时，可能会看到以下错误消息：“找不到 Git。请使用“git.path”设置来安装或使用它。”
-请从 git-scm 网站下载并安装适用于 Windows 的 Git：https://git-scm.com/download/win，为 VS Code 工作区中的“源代码管理”面板提供技术支持。</p></li>
-</ol>
+<p>⑴ 下载适用于 Windows 的 VS Code：<a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com</a>。</p>
+<p>⑵ 首次打开 VS Code 时，可能会看到以下错误消息：“找不到 Git。请使用“git.path”设置来安装或使用它。” 请从 git-scm 网站下载并安装适用于 Windows 的 Git：https://git-scm.com/download/win，为 VS Code 工作区中的“源代码管理”面板提供技术支持。</p>
 </div>
 <div class="section" id="remote-wsl">
 <h4><span class="section-number">7.2.2.2. </span>安装 Remote - WSL 扩展<a class="headerlink" href="#remote-wsl" title="永久链接至标题">¶</a></h4>
@@ -386,20 +365,20 @@
 <div class="section" id="shell-wsl">
 <h4><span class="section-number">7.2.2.3. </span>将默认终端 Shell 更改为 WSL<a class="headerlink" href="#shell-wsl" title="永久链接至标题">¶</a></h4>
 <p>在 VS Code 中，选择“视图” &gt; “终端”（或选择使用反撇号字符的 Ctrl+`）。 将在 VS Code 窗口的底部打开命令行（或终端 shell）窗口。 通过此窗口可以运行各种命令行工具，而无需离开 VS Code。</p>
-<p>VS Code 的默认终端是 PowerShell，若要更改默认 VS Code 终端 Shell，请打开终端下拉列表并选择“选择默认 Shell”。 将打开包含可用 Shell 列表的“设置”窗口。 选择列表中的“WSL Bash”。 （也可从命令面板打开默认终端选取器，选择 F1 键并输入“终端:<em><strong>选择默认 Shell”</strong>。）</em></p>
+<p>VS Code 的默认终端是 PowerShell，若要更改默认 VS Code 终端 Shell，请打开终端下拉列表并选择“选择默认 Shell”。 将打开包含可用 Shell 列表的“设置”窗口。 选择列表中的“WSL Bash”。 （也可从命令面板打开默认终端选取器，选择 F1 键并输入“终端: 选择默认 Shell”。）</p>
 <p><img alt="customize-terminal-vscode" src="_images/customize-terminal-vscode.png" /></p>
+</div>
+<div class="section" id="id5">
+<h4><span class="section-number">7.2.2.4. </span>文件存储位置<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h4>
+<p>Windows 和 Linux 文件存储在不同的目录中， 建议将项目文件保存到 Windows 用户主目录中。通过此设置，Windows 应用（包括 VS Code）可以访问和操作这些文件，同时你也仍能从 Linux 终端访问它们。</p>
 <blockquote>
 <div><p><strong>注意：</strong></p>
-<ol class="simple">
-<li><p>Windows 和 Linux 文件存储在不同的目录中， 建议将项目文件保存到 Windows 用户主目录中。通过此设置，Windows 应用（包括 VS Code）可以访问和操作这些文件，同时你也仍能从 Linux 终端访问它们。</p>
 <ul class="simple">
 <li><p>存储在 <code class="docutils literal notranslate"><span class="pre">C:\Users\\</span></code> 中的所有文件都将映射到 WSL 发行版中的以下位置：<code class="docutils literal notranslate"><span class="pre">/mnt/c/Users/</span></code>；</p></li>
 <li><p>不得在 Windows 应用内编辑 WSL 根目录中的文件。</p></li>
+<li><p>在 Jekyll 中使用 UTF-8 编码时，请务必确保文件不含 <code class="docutils literal notranslate"><span class="pre">BOM</span></code> 标签！可以在 VS Code 中查看以及修改编码格式：
+<img alt="vscode-encoding" src="_images/vscode-encoding.png" /></p></li>
 </ul>
-</li>
-<li><p>在 Jekyll 中使用 UTF-8 编码时，请务必确保文件不含 <code class="docutils literal notranslate"><span class="pre">BOM</span></code> 标签！可以在 VS Code 中查看以及修改编码格式：</p></li>
-</ol>
-<p><img alt="vscode-encoding" src="_images/vscode-encoding.png" /></p>
 </div></blockquote>
 </div>
 </div>
@@ -430,8 +409,8 @@ sudo apt-get install ruby2.5 ruby2.5-dev build-essential dh-autoreconf
 </pre></div>
 </div>
 </div>
-<div class="section" id="id5">
-<h4><span class="section-number">7.2.3.3. </span>安装 Jekyll<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id6">
+<h4><span class="section-number">7.2.3.3. </span>安装 Jekyll<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
 <p>在 WSL-Ubuntu 命令行窗口中执行以下命令，安装 Jekyll 相关包：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gem install jekyll bundler
 gem install jekyll-sitemap
@@ -440,8 +419,8 @@ gem install jekyll-paginate
 </pre></div>
 </div>
 </div>
-<div class="section" id="id6">
-<h4><span class="section-number">7.2.3.4. </span>检查 Jekyll 安装<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id7">
+<h4><span class="section-number">7.2.3.4. </span>检查 Jekyll 安装<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h4>
 <p>在 WSL-Ubuntu 命令行窗口中执行以下命令：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jekyll -v
 </pre></div>
@@ -449,8 +428,8 @@ gem install jekyll-paginate
 <p>如果 Jekyll 已安装在 WSL-Ubuntu 环境中，应该会显示当前安装的 Jekyll 版本：</p>
 <p><img alt="jekyll-v" src="_images/jekyll-v.png" /></p>
 </div>
-<div class="section" id="id7">
-<h4><span class="section-number">7.2.3.5. </span>附录：Jekyll 常用命令<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id8">
+<h4><span class="section-number">7.2.3.5. </span>附录：Jekyll 常用命令<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jekyll</span> <span class="pre">new</span> <span class="pre">PATH</span></code> - 使用基于 gem 的默认主题在指定目录中创建一个全新的 Jekyll 站点。必要的目录也会被自动创建。</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">jekyll</span> <span class="pre">new</span> <span class="pre">PATH</span> <span class="pre">--blank</span></code> - 在指定的目录下创建一个全新的空的 Jekyll 站点框架。</p></li>
@@ -463,10 +442,10 @@ gem install jekyll-paginate
 </ul>
 </div>
 </div>
-<div class="section" id="id8">
-<h3><span class="section-number">7.2.4. </span>小练习：第一个 Jekyll 站点<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <div class="section" id="id9">
-<h4><span class="section-number">7.2.4.1. </span>创建 Jekyll 项目目录<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h4>
+<h3><span class="section-number">7.2.4. </span>小练习：第一个 Jekyll 站点<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id10">
+<h4><span class="section-number">7.2.4.1. </span>创建 Jekyll 项目目录<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h4>
 <p>在 Windows 合适的位置新建一个 <code class="docutils literal notranslate"><span class="pre">myblog</span></code> 文件夹，按住 <kbd>shift</kbd> 对此文件夹单击鼠标右键，选择 “在此打开 Linux Shell”</p>
 <p><img alt="open-with-linux-shell" src="_images/open-with-linux-shell.png" /></p>
 <p>在打开的 WSL-Ubuntu 命令行窗口中，使用 <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">.</span></code> 命令在 VS Code 中打开此目录，并激活 VS Code 的 WSL 终端：</p>
@@ -490,38 +469,31 @@ gem install jekyll-paginate
 </div>
 <p><img alt="myblog-index-html" src="_images/myblog-index-html.png" /></p>
 </div>
-<div class="section" id="id10">
-<h4><span class="section-number">7.2.4.3. </span>发布 Jekyll 测试站点<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id11">
+<h4><span class="section-number">7.2.4.3. </span>发布 Jekyll 测试站点<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h4>
 <p>现在可以使用 Jekyll 发布我们的测试站点了，有两种命令可用于来发布站点：</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jekyll</span> <span class="pre">build</span></code> -  生成站点，并将静态站点输出到名为<code class="docutils literal notranslate"><span class="pre">_site</span></code>的目录.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">jekyll</span> <span class="pre">serve</span></code> - 生成站点，并运行一个本地 Web 服务器，可在浏览器中通过<code class="docutils literal notranslate"><span class="pre">http://localhost:4000</span></code>访问改站点，任何对源文件的修改都将会重构站点的内容。</p></li>
-<li><p>通常在本地开发时使用<code class="docutils literal notranslate"><span class="pre">jekyll</span> <span class="pre">serve</span></code> 命令，而<code class="docutils literal notranslate"><span class="pre">jekyll</span> <span class="pre">build</span></code> 命令用来为生产环境构建站点。</p></li>
 </ul>
-<ol class="simple">
-<li><p>在 VS Code 的 WSL 终端中执行 <code class="docutils literal notranslate"><span class="pre">jekyll</span> <span class="pre">serve</span></code> 命令：</p></li>
-</ol>
+<p>通常在本地开发时使用<code class="docutils literal notranslate"><span class="pre">jekyll</span> <span class="pre">serve</span></code> 命令，而<code class="docutils literal notranslate"><span class="pre">jekyll</span> <span class="pre">build</span></code>命令用来为生产环境构建站点。</p>
+<p>请按照以下步骤发布一个 Jekyll 测试站点：</p>
+<p>⑴ 在 VS Code 的 WSL 终端中执行 <code class="docutils literal notranslate"><span class="pre">jekyll</span> <span class="pre">serve</span></code> 命令：</p>
 <p><img alt="jekyll-serve" src="_images/jekyll-serve.png" /></p>
-<ol class="simple">
-<li><p>在浏览器中转到 <code class="docutils literal notranslate"><span class="pre">http://localhost:4000</span></code>——Hello World!</p></li>
-</ol>
+<p>⑵ 在浏览器中转到 <code class="docutils literal notranslate"><span class="pre">http://localhost:4000</span></code>——Hello World!</p>
 <p><img alt="jekyll-hello-world" src="_images/jekyll-hello-world.png" /></p>
-<ol class="simple">
-<li><p>在 VS Code 中的 <code class="docutils literal notranslate"> <span class="pre">&lt;h1&gt;Hello</span> <span class="pre">World!&lt;/h1&gt;</span></code> 下添加一行：</p></li>
-</ol>
+<p>⑶ 在 VS Code 中的 <code class="docutils literal notranslate"> <span class="pre">&lt;h1&gt;Hello</span> <span class="pre">World!&lt;/h1&gt;</span></code> 下添加一行：</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Hello Jekyll!<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p><img alt="add-hello-jekyll" src="_images/add-hello-jekyll.png" /></p>
-<ol class="simple">
-<li><p>在浏览器中刷新一下当前页面，看看发生了什么：</p></li>
-</ol>
+<p>⑷ 在浏览器中刷新一下当前页面，看看发生了什么：</p>
 <p><img alt="hello-jekyll" src="_images/hello-jekyll.png" /></p>
 </div>
 </div>
 </div>
-<div class="section" id="id11">
-<h2><span class="section-number">7.3. </span>使用 Jekyll 搭建个人博客<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id12">
+<h2><span class="section-number">7.3. </span>使用 Jekyll 搭建个人博客<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
 <blockquote>
 <div><p><strong>注意：</strong> 本节部分内容参考了知乎用户<a class="reference external" href="https://www.zhihu.com/people/ll-chen-2">柠檬橙</a>的文章<a class="reference external" href="https://zhuanlan.zhihu.com/p/94121927">《可能是最全面的github pages搭建个人博客教程》</a>，感谢他的热心分享！</p>
 </div></blockquote>
@@ -534,8 +506,8 @@ gem install jekyll-paginate
 </ul>
 <p>以上流程需要使用者具有一定的 Git 和 HTML/CSS 基础，然后花不少时间才能做出一个优雅、漂亮的博客站点。但随着 GitHub 开始原生支持 Jekyll，越来越多的 Geek 开始使用 GitHub Pages 搭建个人博客，并将主题模板作为公共仓库向他人开放，现在使用 Jekyll 搭建基于 GitHub Pages 的博客站点已变得十分简单、高效。</p>
 <p>下面将向大家介绍如何利用 Jekyll 搭建一个基于 GitHub Pages 的简易博客站点。</p>
-<div class="section" id="id12">
-<h3><span class="section-number">7.3.1. </span>创建博客仓库<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id13">
+<h3><span class="section-number">7.3.1. </span>创建博客仓库<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <p>首先，我们需要建设一个用于我们博客站点的 GitHub 仓库，名称必须是：<code class="docutils literal notranslate"><span class="pre">username.github.io</span></code> 这里的 <strong>username</strong> 指的是 GitHub 用户/组织的帐户名称，这个地址将会成为博客站点的网址。例如，本教程博客对应的 GitHub 仓库名称就是 <code class="docutils literal notranslate"><span class="pre">dac-tutorial.github.io</span></code>。</p>
 <blockquote>
 <div><p><strong>提示：</strong> 仓库的名称不是 <code class="docutils literal notranslate"><span class="pre">username.github.io</span></code> 也可以启用 GitHub Pages 功能，但会作为 <code class="docutils literal notranslate"><span class="pre">username.github.io</span></code> 的子站点， 实际上，你可以认为 <code class="docutils literal notranslate"><span class="pre">username.github.io</span></code> 是 GitHub 分配给你的默认域名，同名仓库即代表着网站首页，其他仓库则是网站的其他内容。例如，你可以通过 <a class="reference external" href="https://dac-tutorial.github.io/sphinx-html-demo/">https://dac-tutorial.github.io/sphinx-html-demo/</a> 访问到本教程在之前章节中作为示例的一个 Sphinx 测试站点。</p>
@@ -552,8 +524,8 @@ gem install jekyll-paginate
 <p>现在，我们可以在浏览器中转到 “自己” 的<a class="reference external" href="https://dac-tutorial.github.io/">博客站点</a>看看，其内容应该和 <a class="reference external" href="https://github.com/lemonchann/lemonchann.github.io">lemonchann/lemonchann.github.io</a> 完全相同。</p>
 <p><img alt="lemonchann-blog" src="_images/lemonchann-blog.png" /></p>
 </div>
-<div class="section" id="id13">
-<h3><span class="section-number">7.3.2. </span>修改博客配置<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id14">
+<h3><span class="section-number">7.3.2. </span>修改博客配置<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <p>经过前一小节的操作，我们通过 <code class="docutils literal notranslate"><span class="pre">fork</span></code> 快速创建了<a class="reference external" href="https://github.com/dac-tutorial/dac-tutorial.github.io">博客仓库</a>，但现在其配置和内容都还是原作者的，我们需要进行一些修改。使用 GitHub Desktop 将仓库 clone 至本地后，将 <code class="docutils literal notranslate"><span class="pre">_posts</span></code> 目录清空，删除 <code class="docutils literal notranslate"><span class="pre">images</span></code> 目录下除了 <code class="docutils literal notranslate"><span class="pre">404.jpg</span></code> 外的其他文件。然后打开博客的配置文件 <em><strong>_config.yml</strong></em> 文件，它位于博客根目录下，我们需要修改以下内容：</p>
 <ul class="simple">
 <li><p><strong>博客名称和描述：</strong> 将 name 和 description 修改为自己的信息。</p></li>
@@ -604,8 +576,8 @@ gem install jekyll-paginate
 <div><p><strong>提示：</strong> 也可以在完成配置修改后，通过 GitHub Desktop 将修改 push 到远程仓库中，待 GitHub Pages 重构后，可直接在博客网址上看到修改后的效果，但这个方法对于调试不是很方便。</p>
 </div></blockquote>
 </div>
-<div class="section" id="id14">
-<h3><span class="section-number">7.3.3. </span>添加博客内容<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id15">
+<h3><span class="section-number">7.3.3. </span>添加博客内容<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <p>修改完博客配置后，我们需要为我们的博客添加内容，也就是我们的的博文。所有的文章都使用 Markdown 标记语言撰写，统一存放在 <strong>_post</strong> 文件夹下。然后，在浏览器中转到（刷新） <a class="reference external" href="http://localhost:4000">http://localhost:4000</a>页面，就能在页面中看到新增的博文。</p>
 <blockquote>
 <div><p><strong>注意：</strong> <strong>博文必须采用统一的命名格式</strong> <code class="docutils literal notranslate"><span class="pre">yyyy-mm-dd-blogName.md</span></code> ，比如 <code class="docutils literal notranslate"><span class="pre">2020-01-12-markdown_guide.md</span></code></p>
@@ -613,8 +585,8 @@ gem install jekyll-paginate
 <p>确认无误后，使用 GitHub Desktop 将修改上传到远程仓库中，待 GitHub Pages 重构后，我们就能在博客网址上看到我们的博文了。</p>
 <p><img alt="add-new-article" src="_images/add-new-article.png" /></p>
 </div>
-<div class="section" id="id15">
-<h3><span class="section-number">7.3.4. </span>其他博客功能<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id16">
+<h3><span class="section-number">7.3.4. </span>其他博客功能<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <p>经过以上步骤，大家已经基本搭建好了一个个人博客站点，现在我们只需要不断添加、更新博文，以及根据需要修改博客设置就可以了。如果大家还想为自己的博客添加一些其他的功能，提升用户体验，可以参考以下几篇文章：</p>
 <blockquote>
 <div><ul class="simple">
