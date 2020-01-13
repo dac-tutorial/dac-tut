@@ -251,9 +251,6 @@
 <img alt="_images/rtd-set-project.png" src="_images/rtd-set-project.png" />
 <p>在添加项目页面，我们需要填写好项目的名称、地址等信息。在额外信息界面，我们可以补充诸如所使用的编程语言等信息。最后点击完成，即可完成导入项目过程。</p>
 <img alt="_images/rtd-extra-info.png" src="_images/rtd-extra-info.png" />
-<p>此外，我们还可以自定义域名：
-- 在域名管理中添加 DNS 的 CNAME 记录到 readthedocs.io。
-- 在项目的 <code class="docutils literal notranslate"><span class="pre">Admin</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Domains</span></code> 中设置上一步添加的域名，开启 HTTPS，保存。</p>
 <p>接下来，返回 Github，在项目仓库的首页右侧寻找 <code class="docutils literal notranslate"><span class="pre">Settings</span></code> ，进行以下操作：</p>
 <ul class="simple">
 <li><p>在 <code class="docutils literal notranslate"><span class="pre">Settings</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Options</span></code> 的 <code class="docutils literal notranslate"><span class="pre">Danger</span> <span class="pre">Zone</span></code> 中将仓库设为公开（ <code class="docutils literal notranslate"><span class="pre">Make</span> <span class="pre">Public</span></code> ）。</p></li>
@@ -261,9 +258,14 @@
 </ul>
 <img alt="_images/add-webhook.png" src="_images/add-webhook.png" />
 <ul class="simple">
-<li><p>将 <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> 改名为 <code class="docutils literal notranslate"><span class="pre">contents.rst</span></code> 或在根目录下创建文件 <code class="docutils literal notranslate"><span class="pre">readthedocs.yml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>，参考官网 `` &lt;<a class="reference external" href="https://docs.readthedocs.io/en/stable/config-file/v2.html">https://docs.readthedocs.io/en/stable/config-file/v2.html</a>&gt;``_ 的介绍进行更多配置。</p></li>
+<li><p>将 <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> 改名为 <code class="docutils literal notranslate"><span class="pre">contents.rst</span></code> （ReadTheDocs 默认识别的索引文件名是 contents）或在根目录下创建文件 <code class="docutils literal notranslate"><span class="pre">readthedocs.yml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>，参考官网 `` &lt;<a class="reference external" href="https://docs.readthedocs.io/en/stable/config-file/v2.html">https://docs.readthedocs.io/en/stable/config-file/v2.html</a>&gt;``_ 的介绍进行更多自定义配置。</p></li>
 </ul>
 <p>返回 ReadTheDocs，点击 <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">version</span></code> 进行在线网页的发布。</p>
+<p>此外，我们还可以自定义域名：</p>
+<ul class="simple">
+<li><p>在域名管理中添加 DNS 的 CNAME 记录到 readthedocs.io。</p></li>
+<li><p>在项目的 <code class="docutils literal notranslate"><span class="pre">Admin</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Domains</span></code> 中设置上一步添加的域名，开启 HTTPS，保存。</p></li>
+</ul>
 <p>现在，每当我们推送新的内容到 Github 仓库， ReadTheDocs 都会自动识别并更新文档。</p>
 </div>
 <div class="section" id="github-pages">
