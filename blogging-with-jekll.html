@@ -201,9 +201,7 @@
             
   <div class="section" id="jekyll">
 <h1><span class="section-number">7. </span>拓展：Jekyll 博客搭建<a class="headerlink" href="#jekyll" title="永久链接至标题">¶</a></h1>
-<blockquote>
-<div><p><strong>提示：</strong> 在学习此部分内容之前，希望同学们已经了解如何管理 GitHub 远程仓库，并且能够熟练使用 VS Code 代码编辑器与 Markdown 标记语言（本教程的博客上有一个 <a class="reference external" href="https://dac-tutorial.github.io/Markdown-%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">Markdown 简明教程</a>，欢迎同学们学习！），对这些内容还不太熟悉的同学请先复习一下教程前面章节的相应内容，然后再学习开始此专题。</p>
-</div></blockquote>
+<p><strong>提示：</strong> 在学习此部分内容之前，希望同学们已经了解如何管理 GitHub 远程仓库，并且能够熟练使用 VS Code 代码编辑器与 Markdown 标记语言（本教程的博客上有一个 <a class="reference external" href="https://dac-tutorial.github.io/Markdown-%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">Markdown 简明教程</a>，欢迎同学们学习！），对这些内容还不太熟悉的同学请先复习一下教程前面章节的相应内容，然后再学习开始此专题。</p>
 <p>欢迎同学们继续学习本教程！这是本教程的最后一个学习专题，也是整个教程的最后一章！</p>
 <p>本专题将会向大家介绍如何使用 Jekyll 搭建免费的个人博客，经过这一段时间的学习，相信同学们一定有了不少学习心得与感悟，何不将他们记录下来，与大家一同分享、一同进步呢！</p>
 <div class="section" id="id1">
@@ -494,9 +492,7 @@ gem install jekyll-paginate
 </div>
 <div class="section" id="id12">
 <h2><span class="section-number">7.3. </span>使用 Jekyll 搭建个人博客<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
-<blockquote>
-<div><p><strong>注意：</strong> 本节部分内容参考了知乎用户<a class="reference external" href="https://www.zhihu.com/people/ll-chen-2">柠檬橙</a>的文章<a class="reference external" href="https://zhuanlan.zhihu.com/p/94121927">《可能是最全面的github pages搭建个人博客教程》</a>，感谢他的热心分享！</p>
-</div></blockquote>
+<p><strong>声明：</strong> 本节部分内容参考了知乎用户<a class="reference external" href="https://www.zhihu.com/people/ll-chen-2">柠檬橙</a>的文章<a class="reference external" href="https://zhuanlan.zhihu.com/p/94121927">《可能是最全面的github pages搭建个人博客教程》</a>，感谢他的热心分享！</p>
 <p>传统上，使用 Jekyll 搭建博客站点的一般流程大致如下：</p>
 <ul class="simple">
 <li><p>首先，在本地使用<code class="docutils literal notranslate"><span class="pre">jekyll</span> <span class="pre">new</span> <span class="pre">PATH</span></code> 创建一个 Jekyll 项目；</p></li>
@@ -515,7 +511,7 @@ gem install jekyll-paginate
 <p>如下图所示，我们可以新建一个名为<code class="docutils literal notranslate"><span class="pre">username.github.io</span></code> 的，建议勾选上 <code class="docutils literal notranslate"><span class="pre">Initialize</span> <span class="pre">this</span> <span class="pre">repository</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">README</span></code> 用来做此仓库的说明文件。（你甚至可以使用 Jekyll 把它转换成整个博客站点的首页！）</p>
 <p><img alt="github-create-a-repo" src="_images/github-create-a-repo.png" /></p>
 <p>之后，我们可以将此仓库 clone 到本地然后，使用我们先前搭建的 Jekyll 开发环境将其逐步完善后发布博客站点。</p>
-<p>不过，一个更加简单、高效的方式是直接在 GitHub 上 fork 其他人公开的博客站点仓库，然后在其基础上进行修改和补充。知乎用户<a class="reference external" href="https://www.zhihu.com/people/ll-chen-2">柠檬橙</a>在其文章<a class="reference external" href="https://zhuanlan.zhihu.com/p/94121927">《可能是最全面的github pages搭建个人博客教程》</a>里向大家分享了他使用 Jekyll 搭建的 <a class="reference external" href="https://github.com/lemonchann/lemonchann.github.io">GitHub 博客仓库</a>，在他的仓库页面点击 <strong>fork</strong>，将他的仓库 <strong>fork</strong> 到我们的账号下（同学们也可以 <strong>fork</strong> <a class="reference external" href="https://github.com/dac-tutorial/dac-tutorial.github.io">本教程的博客站点仓库</a>）：</p>
+<p>不过，一个更加简单、高效的方式是直接在 GitHub 上 fork 其他人公开的博客站点仓库（也可以先 clone 至本地然后上传到远程仓库），然后在其基础上进行修改和补充。知乎用户<a class="reference external" href="https://www.zhihu.com/people/ll-chen-2">柠檬橙</a>在其文章<a class="reference external" href="https://zhuanlan.zhihu.com/p/94121927">《可能是最全面的github pages搭建个人博客教程》</a>里向大家分享了他使用 Jekyll 搭建的 <a class="reference external" href="https://github.com/lemonchann/lemonchann.github.io">GitHub 博客仓库</a>，在他的仓库页面点击 fork，将他的仓库 fork 到我们的账号下（同学们也可以 fork 或 clone <a class="reference external" href="https://github.com/dac-tutorial/dac-tutorial.github.io">本教程的博客站点仓库</a>）：</p>
 <p><img alt="github-fork-a-repo" src="_images/github-fork-a-repo.png" /></p>
 <p>然后，我们可以在账号下看到一个 <strong>fork</strong> 自 <a class="reference external" href="https://github.com/lemonchann/lemonchann.github.io">lemonchann/lemonchann.github.io</a> 的仓库：</p>
 <p><img alt="github-repo-forked" src="_images/github-repo-forked.png" /></p>
